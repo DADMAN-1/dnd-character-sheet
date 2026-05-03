@@ -1,0 +1,3867 @@
+// Version: 3.0.0
+type Abilities__454778255 =
+  {cha : Nat; con : Nat; dex : Nat; int : Nat; str : Nat; wis : Nat};
+type AllianceTreaty__650767679 =
+  {
+    armyId : Text;
+    breakDate : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    partyA : Text;
+    partyB : Text;
+    signedDate : Text;
+    status : Text;
+    terms : Text
+  };
+type AlliedArmy__983697341 =
+  {
+    allegiance : Text;
+    commander : Text;
+    id : Text;
+    name : Text;
+    notes : Text;
+    size : Nat
+  };
+type Ally__436899841 =
+  {
+    characterId : CharacterId__426727889;
+    id : Nat;
+    name : Text;
+    notes : Text;
+    relationship : Text
+  };
+type AmnesticLogEntry__285004916 =
+  {
+    amnesticClass : Text;
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    reason : Text;
+    recipient : Text
+  };
+type AncientHistoryEntry__1001307469 =
+  {
+    affectedFactions : Text;
+    affectedLocations : Text;
+    date : Text;
+    description : Text;
+    era : Text;
+    eventTitle : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal
+  };
+type AngelClassEntry__949705949 =
+  {
+    angelType : Text;
+    armyId : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    soldierName : Text
+  };
+type AnomalyExposureEntry__850981435 =
+  {
+    anomalyType : Text;
+    armyId : Text;
+    date : Text;
+    effects : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    personnelName : Text
+  };
+type AppReminder__1047821781 =
+  {
+    eventDate : Int;
+    id : Text;
+    isDismissed : Bool;
+    reminderNote : Text;
+    title : Text
+  };
+type ArmyAbility__67547608 =
+  {cost : Text; description : Text; effect : Text; id : Text; name : Text};
+type ArmyAlignmentEntry__434946874 =
+  {
+    armyId : Text;
+    ethicalAxis : Text;
+    id : Text;
+    lastUpdated : Text;
+    moralAxis : Text;
+    notes : Text;
+    owner : Principal
+  };
+type ArmyBranch__21402394 =
+  {
+    abilities : [ArmyAbility__67547608];
+    condition : Text;
+    deploymentLocation : Text;
+    headcount : Nat;
+    id : Text;
+    interBranchNotes : Text;
+    loadouts : [ArmyLoadout__936867318];
+    machineryIds : [Text];
+    name : Text;
+    officerIds : [Text];
+    specialties : [Text];
+    trainingLevel : Text;
+    veteranFlag : Bool
+  };
+type ArmyCommandStructure__660773525 =
+  {
+    chainOfCommand : [ChainEntry__578867931];
+    ordersLog : [OrderEntry__269657040]
+  };
+type ArmyCommander__400631399 =
+  {
+    abilities : [ArmyAbility__67547608];
+    background : Text;
+    commandSkills : [Text];
+    factionId : ?Nat;
+    historyNotes : Text;
+    id : Text;
+    name : Text;
+    rankId : Text;
+    signatureAbility : Text
+  };
+type ArmyDoctrine__765109058 =
+  {
+    armyId : Text;
+    combatDoctrine : Text;
+    id : Text;
+    lastUpdated : Text;
+    notes : Text;
+    owner : Principal;
+    rulesOfEngagement : Text;
+    standingOrders : Text;
+    title : Text
+  };
+type ArmyIntelligence__173988429 =
+  {
+    enemyIntelLog : [EnemyIntelEntry__287127870];
+    scoutReports : [ScoutReport__109061369]
+  };
+type ArmyLoadout__936867318 =
+  {armorType : Text; id : Text; name : Text; notes : Text; weaponType : Text};
+type ArmyLogistics__282505001 =
+  {
+    ammunition : Nat;
+    casualtiesLog : [CasualtyEntry__277561330];
+    food : Nat;
+    goldReserves : Nat;
+    injuryNotes : Text;
+    supplyLines : [SupplyLine__634555787]
+  };
+type ArmyLootEntry__73362404 =
+  {
+    armyId : Text;
+    dateAcquired : Text;
+    distributed : Bool;
+    id : Text;
+    lootType : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    quantity : Nat;
+    source : Text;
+    value : Nat
+  };
+type ArmyMachinery__354006645 =
+  {
+    condition : Text;
+    crewSize : Nat;
+    damageEffect : Text;
+    id : Text;
+    machineryType : Text;
+    name : Text;
+    notes : Text
+  };
+type ArmyMetadata__26435673 =
+  {
+    ageDescription : Text;
+    armyId : Text;
+    doctrine : Text;
+    foundingDate : Text;
+    id : Text;
+    moraleWarningEnabled : Bool;
+    moraleWarningThreshold : Nat;
+    owner : Principal;
+    reputationNotes : Text;
+    reputationScore : Nat
+  };
+type ArmyMoraleData__550961796 =
+  {
+    loyaltyTracker : [LoyaltyEntry__110719481];
+    moraleEventsLog : [MoraleEvent__138457110]
+  };
+type ArmyMoraleHistoryEntry__658460375 =
+  {eventType : Text; modifier : Int; notes : Text; timestamp : Text};
+type ArmyNotes__1065596720 =
+  {
+    battlePlannerNotes : [BattlePlanEntry__126623773];
+    campaignLog : [CampaignLogEntry__723736144];
+    generalNotes : Text
+  };
+type ArmyOfficer__17209864 =
+  {
+    background : Text;
+    combatAbility : Nat;
+    factionId : ?Nat;
+    id : Text;
+    leadership : Nat;
+    loyalty : Nat;
+    name : Text;
+    notes : Text;
+    promotionLog : [OfficerPromotion__308070917];
+    race : Text;
+    rankId : Text;
+    skills : [Text]
+  };
+type ArmyRank__927678099 =
+  {description : Text; id : Text; name : Text; tier : Nat; troopCount : Nat};
+type ArmyRelationship__772535226 =
+  {armyName : Text; id : Text; notes : Text; relationship : Text};
+type ArmyRivalEntry__786629904 =
+  {
+    armyId : Text;
+    id : Text;
+    lossesAgainst : Nat;
+    notes : Text;
+    owner : Principal;
+    rivalArmyId : Text;
+    rivalArmyName : Text;
+    rivalryNote : Text;
+    startDate : Text;
+    winsAgainst : Nat
+  };
+type Army__411922605 =
+  {
+    alliedArmies : [AlliedArmy__983697341];
+    armyAbilities : [ArmyAbility__67547608];
+    armyNotes : ArmyNotes__1065596720;
+    banner : Text;
+    branches : [ArmyBranch__21402394];
+    characterId : CharacterId__426727889;
+    commandStructure : ArmyCommandStructure__660773525;
+    commanderAbilities : [ArmyAbility__67547608];
+    commanders : [ArmyCommander__400631399];
+    commandingCharacterId : ?Text;
+    condition : Text;
+    faction : Text;
+    foundingDate : Text;
+    id : Text;
+    intelligence : ArmyIntelligence__173988429;
+    logistics : ArmyLogistics__282505001;
+    machinery : [ArmyMachinery__354006645];
+    moraleData : ArmyMoraleData__550961796;
+    moraleRating : Nat;
+    name : Text;
+    officerAbilities : [ArmyAbility__67547608];
+    officers : [ArmyOfficer__17209864];
+    owner : Principal;
+    powerLevel : Nat;
+    race : Text;
+    ranks : [ArmyRank__927678099];
+    size : Nat;
+    specOpsGroups : [SpecOpsGroup__183790933];
+    specialties : [Text];
+    status : Text;
+    terrainNotes : Text;
+    trainingLevel : Text;
+    warChest : Nat
+  };
+type AscensionLogEntry__621512847 =
+  {
+    armyId : Text;
+    date : Text;
+    fromRank : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    reason : Text;
+    soldierName : Text;
+    toRank : Text
+  };
+type AttunedItem__875709364 = {id : Text; itemName : Text; notes : Text};
+type BattleEngagement__785137708 =
+  {
+    date : Text;
+    id : Text;
+    losses : Text;
+    name : Text;
+    notes : Text;
+    outcome : Text
+  };
+type BattleOutcome__486297084 =
+  {
+    armyId : Text;
+    casualties : Text;
+    date : Text;
+    id : Nat;
+    notes : Text;
+    opponent : Text;
+    owner : Principal;
+    result : Text
+  };
+type BattlePlanEntry__126623773 =
+  {date : Text; id : Text; notes : Text; objective : Text};
+type BestiaryCreature__703311533 =
+  {
+    behaviors : Text;
+    creatureType : Text;
+    encounterCount : Nat;
+    id : Nat;
+    immunities : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    weaknesses : Text
+  };
+type BetrayalLogEntry__905635462 =
+  {
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    offense : Text;
+    owner : Principal;
+    punishment : Text;
+    traitorName : Text
+  };
+type BlackBudgetEntry__763928713 =
+  {
+    allocation : Text;
+    amount : Text;
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    purpose : Text
+  };
+type BloodOathEntry__759940224 =
+  {
+    armyId : Text;
+    breakNotes : Text;
+    broken : Bool;
+    conditions : Text;
+    date : Text;
+    id : Text;
+    oathText : Text;
+    owner : Principal;
+    soldierId : Text;
+    soldierName : Text;
+    swornTo : Text
+  };
+type BloodlineEntry__891013915 =
+  {
+    characterId : Text;
+    description : Text;
+    era : Text;
+    id : Text;
+    name : Text;
+    notableAncestors : Text;
+    notes : Text;
+    owner : Principal;
+    relation : Text
+  };
+type BountyObjective__574990962 =
+  {
+    armyId : Text;
+    completedAt : Text;
+    description : Text;
+    id : Text;
+    notes : Text;
+    objectiveType : Text;
+    owner : Principal;
+    reward : Text;
+    status : Text;
+    target : Text;
+    title : Text
+  };
+type CalendarEvent__740917318 =
+  {
+    category : Text;
+    date : Text;
+    description : Text;
+    id : Nat;
+    linkedEncounterId : Text;
+    linkedSessionId : Text;
+    notes : Text;
+    owner : Principal;
+    title : Text
+  };
+type CampaignEnemy__479415460 =
+  {
+    campaignId : Text;
+    description : Text;
+    draws : Nat;
+    enemyType : Text;
+    faction : Text;
+    id : Text;
+    knownStrengths : Text;
+    knownWeaknesses : Text;
+    linkedArmyEnemyIds : [Text];
+    losses : Nat;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    status : Text;
+    wins : Nat
+  };
+type CampaignLogEntry__723736144 = {date : Text; entry : Text; id : Text};
+type Campaign__370329394 =
+  {
+    armyIds : [Text];
+    characterIds : [Text];
+    description : Text;
+    id : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    startDate : Text;
+    status : Text
+  };
+type CapturedEnemy__204238910 =
+  {
+    armyId : Text;
+    background : Text;
+    faction : Text;
+    id : Nat;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    rank : Text;
+    status : Text
+  };
+type CasualtyEntry__277561330 =
+  {
+    branchName : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    troopLosses : Nat;
+    woundedOfficers : Nat
+  };
+type CelestialBlessingEntry__63765181 =
+  {
+    armyId : Text;
+    blessingType : Text;
+    date : Text;
+    description : Text;
+    id : Text;
+    owner : Principal;
+    soldierName : Text
+  };
+type ChainEntry__578867931 =
+  {id : Text; officerId : Text; reportsToId : Text; role : Text};
+type CharacterAbilityId__304596555 = Nat;
+type CharacterAbility__893173401 =
+  {
+    abilityType : Text;
+    characterId : CharacterId__426727889;
+    description : Text;
+    name : Text;
+    rechargeOn : Text;
+    uses : Nat;
+    usesRemaining : Nat
+  };
+type CharacterAppearance__716627774 =
+  {
+    age : Text;
+    distinguishingMarks : Text;
+    eyeColor : Text;
+    hairColor : Text;
+    height : Text;
+    weight : Text
+  };
+type CharacterCondition__640522102 =
+  {
+    autoRemoveOnRest : Bool;
+    description : Text;
+    duration : Text;
+    id : Text;
+    name : Text
+  };
+type CharacterCustomStat__655911524 =
+  {
+    characterId : CharacterId__426727889;
+    id : Nat;
+    owner : Principal;
+    statId : Nat;
+    statName : Text;
+    value : Text
+  };
+type CharacterFeat__577775579 =
+  {
+    characterId : CharacterId__426727889;
+    description : Text;
+    id : Nat;
+    name : Text
+  };
+type CharacterId__426727889 = Nat;
+type CharacterInjury__295302613 =
+  {
+    characterId : CharacterId__426727889;
+    dateReceived : Text;
+    description : Text;
+    estimatedRecovery : Text;
+    id : Text;
+    injuryName : Text;
+    injuryType : Text;
+    owner : Principal;
+    recoveryNotes : Text;
+    recoveryStatus : Text;
+    severity : Text;
+    source : Text
+  };
+type CharacterLegacy__1039455480 =
+  {
+    affectedEntities : Text;
+    characterId : Text;
+    date : Text;
+    id : Text;
+    impactDescription : Text;
+    notes : Text;
+    owner : Principal;
+    title : Text
+  };
+type CharacterPhysicalAttackId__240132237 = Nat;
+type CharacterPhysicalAttack__425758798 =
+  {
+    attackBonus : Int;
+    characterId : CharacterId__426727889;
+    damageDice : Text;
+    damageType : Text;
+    description : Text;
+    name : Text;
+    properties : Text;
+    range : Text;
+    timesUsed : Nat
+  };
+type CharacterProficiency__223642309 =
+  {
+    characterId : CharacterId__426727889;
+    id : Nat;
+    name : Text;
+    profType : Text
+  };
+type CharacterRelationship__716299957 =
+  {
+    characterId : Text;
+    id : Nat;
+    notes : Text;
+    owner : Principal;
+    relatedCharacterName : Text;
+    relationshipType : Text
+  };
+type CharacterSkill__862617531 =
+  {
+    characterId : CharacterId__426727889;
+    expertise : Bool;
+    id : Nat;
+    proficient : Bool;
+    skillName : Text
+  };
+type Character__117766171 =
+  {
+    ac : Nat;
+    alignment : Text;
+    background : Text;
+    cha : Nat;
+    characterClass : Text;
+    con : Nat;
+    dex : Nat;
+    gender : Text;
+    gold : Nat;
+    hpCurrent : Nat;
+    hpMax : Nat;
+    initiative : Nat;
+    int : Nat;
+    level : Nat;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    portraitUrl : Text;
+    proficiencyBonus : Nat;
+    race : Text;
+    skills : Skills__511190422;
+    speed : Nat;
+    spellSlots : [Nat];
+    str : Nat;
+    wis : Nat
+  };
+type ClassId__656678660 = Nat;
+type ClearanceLevelEntry__1064302728 =
+  {
+    armyId : Text;
+    id : Text;
+    level : Nat;
+    notes : Text;
+    owner : Principal;
+    rankCode : Text
+  };
+type Commendation__809892256 =
+  {
+    armyId : Text;
+    awardedBy : Text;
+    date : Text;
+    id : Text;
+    medalName : Text;
+    owner : Principal;
+    reason : Text;
+    soldierId : Text;
+    soldierName : Text
+  };
+type ConcentrationState__775540737 =
+  {concentrationSpellId : ?Text; concentrationSpellName : ?Text};
+type ContainmentBreachEntry__769678257 =
+  {
+    armyId : Text;
+    breach : Text;
+    casualties : Nat;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    resolved : Bool;
+    scpDesignation : Text
+  };
+type CorruptionLogEntry__159159169 =
+  {
+    armyId : Text;
+    corruptionPoints : Nat;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    soldierName : Text;
+    source : Text
+  };
+type CourtMartialEntry__297991379 =
+  {
+    armyId : Text;
+    charge : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    punishment : Text;
+    soldierId : Text;
+    soldierName : Text;
+    verdict : Text
+  };
+type CurrencyState__102703892 =
+  {
+    characterId : CharacterId__426727889;
+    copper : Nat;
+    electrum : Nat;
+    gold : Nat;
+    platinum : Nat;
+    silver : Nat
+  };
+type CursedItemEntry__791249268 =
+  {
+    acquiredDate : Text;
+    characterId : Text;
+    cureCondition : Text;
+    cured : Bool;
+    curse : Text;
+    effects : Text;
+    id : Text;
+    itemName : Text;
+    notes : Text;
+    owner : Principal
+  };
+type CustomAbilityId__516179300 = Nat;
+type CustomAbility__315544986 =
+  {
+    abilityType : Text;
+    description : Text;
+    name : Text;
+    owner : Principal;
+    rechargeOn : Text;
+    uses : Nat
+  };
+type CustomClass__538381920 =
+  {
+    description : Text;
+    features : [Trait__1035200951];
+    hitDie : Nat;
+    name : Text;
+    proficiencies : [Text]
+  };
+type CustomFeat__270370210 =
+  {
+    description : Text;
+    id : Nat;
+    name : Text;
+    owner : Principal;
+    prerequisites : Text
+  };
+type CustomItemId__385119781 = Nat;
+type CustomItem__304457216 =
+  {
+    description : Text;
+    itemType : Text;
+    name : Text;
+    owner : Principal;
+    rarity : Text;
+    value : Text;
+    weight : Text
+  };
+type CustomPhysicalAttackId__499130487 = Nat;
+type CustomPhysicalAttack__523250891 =
+  {
+    attackBonus : Int;
+    damageDice : Text;
+    damageType : Text;
+    description : Text;
+    name : Text;
+    owner : Principal;
+    properties : Text;
+    range : Text
+  };
+type CustomRace__529220210 =
+  {
+    abilityBonuses : Abilities__454778255;
+    description : Text;
+    name : Text;
+    speed : Nat;
+    traits : [Trait__1035200951]
+  };
+type CustomSkill__306518523 =
+  {
+    description : Text;
+    id : Nat;
+    name : Text;
+    owner : Principal;
+    statBased : Text
+  };
+type CustomSpellId__117275880 = Nat;
+type CustomSpellSchoolId__435710678 = Nat;
+type CustomSpellSchool__27635611 = {name : Text; owner : Principal};
+type CustomSpell__1008158895 =
+  {
+    castingTime : Text;
+    components : Text;
+    damageEffect : Text;
+    description : Text;
+    duration : Text;
+    level : Nat;
+    name : Text;
+    owner : Principal;
+    range : Text;
+    school : Text
+  };
+type CustomStat__713766946 =
+  {
+    defaultValue : Text;
+    description : Text;
+    id : Nat;
+    name : Text;
+    owner : Principal
+  };
+type DarkRitualEntry__690927649 =
+  {
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    outcome : Text;
+    owner : Principal;
+    participants : Text;
+    purpose : Text;
+    ritualName : Text
+  };
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type DeathSaveState__999238564 =
+  {characterId : CharacterId__426727889; failures : Nat; successes : Nat};
+type DefectionEntry__779589024 =
+  {
+    date : Text;
+    fromArmyId : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    rank : Text;
+    reason : Text;
+    soldierName : Text;
+    toArmyId : Text
+  };
+type DemonClassEntry__459184084 =
+  {
+    abilities : Text;
+    armyId : Text;
+    demonType : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    soldierName : Text
+  };
+type DeploymentMapNote__459819488 =
+  {
+    armyId : Text;
+    branchName : Text;
+    coordinatesNotes : Text;
+    deploymentStatus : Text;
+    id : Text;
+    lastUpdated : Text;
+    location : Text;
+    notes : Text;
+    owner : Principal;
+    strategicNotes : Text;
+    supplyLineStatus : Text;
+    terrain : Text
+  };
+type DiplomacyEntry__706385042 =
+  {
+    armyId : Text;
+    date : Text;
+    id : Text;
+    keyPersons : Text;
+    notes : Text;
+    otherArmyName : Text;
+    otherFaction : Text;
+    owner : Principal;
+    relationshipType : Text;
+    status : Text;
+    terms : Text
+  };
+type DivineMandateEntry__979997539 =
+  {
+    armyId : Text;
+    authority : Text;
+    date : Text;
+    id : Text;
+    mandate : Text;
+    notes : Text;
+    owner : Principal;
+    status : Text
+  };
+type DreamVisionEntry__256913405 =
+  {
+    characterId : Text;
+    content : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    prophetic : Bool;
+    relatedEntities : Text;
+    title : Text;
+    visionType : Text
+  };
+type DungeonRoom__553387850 =
+  {description : Text; id : Text; name : Text; order : Nat};
+type EncounterEntry__554250843 =
+  {
+    campaignId : ?Text;
+    date : Text;
+    difficulty : Text;
+    id : Text;
+    linkedNpcIds : [Nat];
+    locationId : ?Nat;
+    name : Text;
+    notes : Text;
+    outcome : Text;
+    owner : Principal;
+    xpAwarded : Nat
+  };
+type EnemyIntelEntry__287127870 =
+  {
+    date : Text;
+    enemyName : Text;
+    id : Text;
+    knownStrength : Text;
+    notes : Text;
+    weaknesses : Text
+  };
+type EnemyProfile__642145032 =
+  {
+    armyId : Text;
+    description : Text;
+    draws : Nat;
+    enemyType : Text;
+    faction : Text;
+    id : Text;
+    knownStrengths : Text;
+    knownWeaknesses : Text;
+    losses : Nat;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    wins : Nat
+  };
+type EquipmentSlot__1036044446 =
+  {id : Text; itemId : ?Text; itemName : Text; notes : Text; slotName : Text};
+type EspionageEntry__616356928 =
+  {
+    agentName : Text;
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    operationType : Text;
+    outcome : Text;
+    owner : Principal;
+    target : Text
+  };
+type EthicsReviewEntry__1028472317 =
+  {
+    action : Text;
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    recommendation : Text;
+    reviewer : Text
+  };
+type Faction__393925317 =
+  {
+    alignment : Text;
+    armyAffiliations : Text;
+    characterAffiliations : Text;
+    description : Text;
+    goals : Text;
+    id : Nat;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    relationships : Text
+  };
+type FallenSoldierEntry__1014548072 =
+  {
+    armyId : Text;
+    cause : Text;
+    date : Text;
+    id : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    rank : Text
+  };
+type GainLossDetails__821558022 =
+  {
+    equipmentNotes : Text;
+    gold : Nat;
+    intel : Text;
+    officersCasualties : Text;
+    other : Text;
+    prisoners : Nat;
+    supplies : Nat;
+    territory : Text;
+    troops : Nat
+  };
+type GainLossEntry__731396528 =
+  {
+    armyId : Text;
+    enemyName : Text;
+    gains : GainLossDetails__821558022;
+    id : Text;
+    interactionType : Text;
+    linkedFactionId : ?Nat;
+    losses : GainLossDetails__821558022;
+    moraleApplied : Bool;
+    moraleImpact : Int;
+    notes : Text;
+    outcome : Text;
+    owner : Principal;
+    timestamp : Text
+  };
+type HPState__443063384 =
+  {
+    characterId : CharacterId__426727889;
+    hpCurrent : Int;
+    hpMax : Nat;
+    hpTemp : Nat
+  };
+type HolyRelicEntry__721549440 =
+  {
+    armyId : Text;
+    description : Text;
+    holder : Text;
+    id : Text;
+    name : Text;
+    notes : Text;
+    origin : Text;
+    owner : Principal
+  };
+type HolyWarEntry__710118938 =
+  {
+    armyId : Text;
+    date : Text;
+    id : Text;
+    justification : Text;
+    notes : Text;
+    owner : Principal;
+    status : Text;
+    warName : Text
+  };
+type InfernalDebtEntry__118560708 =
+  {
+    armyId : Text;
+    creditor : Text;
+    date : Text;
+    debtor : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    status : Text;
+    terms : Text
+  };
+type InitiativeEntry__1058032487 =
+  {
+    conditions : [Text];
+    currentHp : Nat;
+    dexModifier : Int;
+    id : Text;
+    initiativeRoll : Int;
+    isPlayer : Bool;
+    maxHp : Nat;
+    name : Text
+  };
+type InitiativeTracker__691507297 =
+  {
+    currentTurnIndex : Nat;
+    encounterId : Text;
+    entries : [InitiativeEntry__1058032487];
+    id : Text;
+    roundNumber : Nat
+  };
+type InspirationState__90715924 = {labelText : Text; points : Nat};
+type InterPresetWarEntry__443531547 =
+  {
+    army1Name : Text;
+    army2Name : Text;
+    conflictName : Text;
+    endDate : Text;
+    id : Text;
+    notes : Text;
+    outcome : Text;
+    owner : Principal;
+    preset1 : Text;
+    preset2 : Text;
+    startDate : Text
+  };
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type InventoryItemId__305587598 = Nat;
+type InventoryItem__576608082 =
+  {
+    characterId : CharacterId__426727889;
+    description : Text;
+    equipped : Bool;
+    name : Text;
+    quantity : Nat;
+    weight : Nat
+  };
+type Language__38428764 =
+  {characterId : CharacterId__426727889; id : Nat; name : Text};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type List__415060402<T> = List__790383201<T>;
+type List__790383201<T> =
+  {
+    var blockIndex : Nat__490723111;
+    var blocks : [var [var ?T]];
+    var elementIndex : Nat__490723111
+  };
+type Location__31265466 =
+  {
+    description : Text;
+    factionId : ?Nat;
+    id : Text;
+    locationType : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    region : Text;
+    visitedDate : Text
+  };
+type LootDistributionEntry__687268189 =
+  {
+    id : Text;
+    itemName : Text;
+    notes : Text;
+    quantity : Nat;
+    recipient : Text;
+    timestamp : Int
+  };
+type LoreEntry__986537718 =
+  {
+    category : Text;
+    content : Text;
+    createdAt : Text;
+    id : Text;
+    owner : Principal;
+    title : Text
+  };
+type LostKnowledgeEntry__989877398 =
+  {
+    category : Text;
+    condition : Text;
+    description : Text;
+    discoveredBy : Text;
+    discoveredDate : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    title : Text
+  };
+type LoyaltyEntry__110719481 =
+  {entityName : Text; id : Text; loyaltyScore : Nat; notes : Text};
+type MIAEntry__48436285 =
+  {
+    armyId : Text;
+    circumstances : Text;
+    dateLastSeen : Text;
+    id : Text;
+    lastKnownLocation : Text;
+    notes : Text;
+    owner : Principal;
+    resolvedDate : Text;
+    soldierId : Text;
+    soldierName : Text;
+    status : Text
+  };
+type Map__158565046<K, V> = Map__297112838<K, V>;
+type Map__297112838<K, V> =
+  {var root : Node__46230540<K, V>; var size : Nat__490723111};
+type Map__605269027<K, V> = Map__158565046<K, V>;
+type MoraleEvent__138457110 =
+  {date : Text; event : Text; id : Text; impact : Text};
+type MulticlassEntry__357766958 =
+  {
+    className : Text;
+    id : Text;
+    isSpellcaster : Bool;
+    level : Nat;
+    spellcastingMod : Text
+  };
+type MythologicalFigure__476502942 =
+  {
+    domain : Text;
+    figureType : Text;
+    id : Text;
+    mythology : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    powers : Text;
+    relationships : Text
+  };
+type NPC__663166745 =
+  {
+    description : Text;
+    factionId : ?Nat;
+    id : Text;
+    location : Text;
+    locationId : ?Nat;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    race : Text;
+    relationship : Text
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type OfficerDuel__508869176 =
+  {
+    date : Text;
+    id : Text;
+    notes : Text;
+    officer1 : Text;
+    officer2 : Text;
+    outcome : Text
+  };
+type OfficerPromotion__308070917 =
+  {date : Text; fromRank : Text; id : Text; notes : Text; toRank : Text};
+type OfficerSkillEntry__856532767 =
+  {armyId : Nat; officerId : Text; skills : [OfficerSkill__444470845]};
+type OfficerSkill__444470845 =
+  {effect : Text; rating : Nat; skillName : Text};
+type OrderEntry__269657040 =
+  {date : Text; id : Text; order : Text; target : Text};
+type PactContractEntry__642260290 =
+  {
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    parties : Text;
+    signed : Bool;
+    status : Text;
+    terms : Text
+  };
+type PartyInventoryItem__507118309 =
+  {
+    description : Text;
+    id : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    quantity : Nat;
+    value : Text;
+    weight : Text
+  };
+type PartyNote__570920119 =
+  {
+    content : Text;
+    createdAt : Text;
+    id : Text;
+    owner : Principal;
+    title : Text
+  };
+type PartyXpEntry__872691350 =
+  {
+    id : Text;
+    notes : Text;
+    sessionId : Text;
+    timestamp : Int;
+    xpEarned : Nat
+  };
+type PersonalLootEntry__250366300 =
+  {
+    characterId : CharacterId__426727889;
+    dateAcquired : Text;
+    id : Text;
+    kept : Bool;
+    lootType : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    quantity : Nat;
+    source : Text;
+    value : Nat
+  };
+type PlaneRealmEntry__1023493949 =
+  {id : Text; owner : Principal; planesOrRealms : [PlaneRealm__334708828]};
+type PlaneRealm__334708828 =
+  {
+    description : Text;
+    linkedLocations : Text;
+    name : Text;
+    notes : Text;
+    planeType : Text;
+    traits : Text
+  };
+type PortalEntry__1063905695 =
+  {
+    campaignId : ?Text;
+    condition : Text;
+    fromLocation : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    portalName : Text;
+    portalType : Text;
+    toLocation : Text
+  };
+type PrayerLogEntry__225020167 =
+  {
+    answered : Bool;
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    prayer : Text
+  };
+type PrisonerExchangeEntry__1011972065 =
+  {
+    armyId : Text;
+    capturedDate : Text;
+    capturedFrom : Text;
+    exchangeDetails : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    prisonerFaction : Text;
+    prisonerName : Text;
+    prisonerRank : Text;
+    ransomAmount : Nat;
+    status : Text
+  };
+type ProphecyEntry__736886886 =
+  {
+    date : Text;
+    fulfilled : Bool;
+    fulfillmentNotes : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    relatedCharacters : Text;
+    relatedFactions : Text;
+    source : Text;
+    text : Text
+  };
+type ProtocolLogEntry__17530565 =
+  {
+    armyId : Text;
+    date : Text;
+    id : Text;
+    invokedBy : Text;
+    notes : Text;
+    owner : Principal;
+    protocol : Text;
+    reason : Text;
+    status : Text
+  };
+type PsychEvalEntry__49550207 =
+  {
+    armyId : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    personnelName : Text;
+    result : Text;
+    reviewer : Text
+  };
+type Quest__148507700 =
+  {
+    description : Text;
+    id : Text;
+    linkedFactionIds : [Nat];
+    linkedNpcIds : [Nat];
+    notes : Text;
+    objectives : Text;
+    reward : Text;
+    status : Text;
+    title : Text
+  };
+type RaceId__245902189 = Nat;
+type RaceLinkedContent__560405931 =
+  {
+    linkedAbilityIds : [CustomAbilityId__516179300];
+    linkedAttackIds : [CustomPhysicalAttackId__499130487];
+    linkedSpellIds : [CustomSpellId__117275880]
+  };
+type RealmTerritoryEntry__366318469 =
+  {
+    armyId : Text;
+    contested : Bool;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    realm : Text;
+    status : Text
+  };
+type ReclassificationEntry__169886748 =
+  {
+    armyId : Text;
+    date : Text;
+    fromClass : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    reason : Text;
+    subject : Text;
+    toClass : Text
+  };
+type RecruitmentEntry__504771073 =
+  {
+    amount : Nat;
+    date : Text;
+    id : Text;
+    location : Text;
+    method : Text;
+    notes : Text
+  };
+type RestState__727316523 =
+  {lastLongRestDate : ?Text; longRestsUsed : Nat; shortRestsUsed : Nat};
+type RivalEntry__337403685 =
+  {
+    backstory : Text;
+    characterId : CharacterId__426727889;
+    currentLocation : Text;
+    faction : Text;
+    id : Text;
+    linkedFactionId : ?Nat;
+    losses : Nat;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    personalHistory : Text;
+    rivalType : Text;
+    status : Text;
+    threatLevel : Text;
+    wins : Nat
+  };
+type SaveThrowState__662216248 =
+  {
+    chaProf : Bool;
+    characterId : CharacterId__426727889;
+    conProf : Bool;
+    dexProf : Bool;
+    intProf : Bool;
+    strProf : Bool;
+    wisProf : Bool
+  };
+type ScoutReport__109061369 =
+  {area : Text; date : Text; findings : Text; id : Text};
+type ScpObjectEntry__236681481 =
+  {
+    armyId : Text;
+    designation : Text;
+    id : Text;
+    location : Text;
+    notes : Text;
+    objectClass : Text;
+    owner : Principal;
+    status : Text
+  };
+type SecretMissionLog__703830613 =
+  {
+    armyId : Text;
+    classification : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    objective : Text;
+    outcome : Text;
+    owner : Principal;
+    participants : Text;
+    title : Text
+  };
+type SessionEntry__220828534 =
+  {
+    campaignId : ?Text;
+    date : Text;
+    id : Text;
+    linkedEncounterIds : [Nat];
+    linkedNpcIds : [Nat];
+    linkedQuestIds : [Nat];
+    loot : Text;
+    notes : Text;
+    owner : Principal;
+    summary : Text;
+    title : Text;
+    xpGained : Nat
+  };
+type Settings__774731784 = {maxLevel : Nat};
+type SiegeEntry__465583606 =
+  {
+    armyId : Text;
+    breaches : Text;
+    endDate : Text;
+    id : Text;
+    notes : Text;
+    outcome : Text;
+    owner : Principal;
+    resourcesConsumed : Text;
+    startDate : Text;
+    target : Text
+  };
+type SinCorruptionEntry__275892720 =
+  {
+    armyId : Text;
+    date : Text;
+    exposureType : Text;
+    id : Text;
+    level : Nat;
+    notes : Text;
+    owner : Principal;
+    soldierName : Text
+  };
+type SiteAssignmentEntry__391706247 =
+  {
+    armyId : Text;
+    assignedDate : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    personnelName : Text;
+    site : Text
+  };
+type Skills__511190422 =
+  {
+    acrobatics : Bool;
+    animalHandling : Bool;
+    arcana : Bool;
+    athletics : Bool;
+    deception : Bool;
+    description : Text;
+    history : Bool;
+    insight : Bool;
+    intimidation : Bool;
+    investigation : Bool;
+    medicine : Bool;
+    nature : Bool;
+    perception : Bool;
+    performance : Bool;
+    persuasion : Bool;
+    religion : Bool;
+    sleightOfHand : Bool;
+    stealth : Bool;
+    survival : Bool
+  };
+type SoldierBio__542605080 =
+  {
+    armyId : Text;
+    backstory : Text;
+    bio : Text;
+    branch : Text;
+    id : Text;
+    notableHistory : Text;
+    owner : Principal;
+    rank : Text;
+    soldierId : Text;
+    soldierName : Text
+  };
+type SoulBountyEntry__38274228 =
+  {
+    armyId : Text;
+    bountyType : Text;
+    date : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    status : Text;
+    targetName : Text;
+    value : Text
+  };
+type SpecOpsGroup__183790933 =
+  {
+    abilities : [ArmyAbility__67547608];
+    condition : Text;
+    equipmentNotes : Text;
+    headcount : Nat;
+    id : Text;
+    missionType : Text;
+    name : Text;
+    notes : Text;
+    officerIds : [Text]
+  };
+type SpellId__158347786 = Nat;
+type SpellSlotState__1007298311 =
+  {
+    characterId : CharacterId__426727889;
+    spellLevel : Nat;
+    total : Nat;
+    used : Nat
+  };
+type Spell__51044746 =
+  {
+    castingTime : Text;
+    characterId : CharacterId__426727889;
+    components : Text;
+    damageEffect : Text;
+    description : Text;
+    duration : Text;
+    level : Nat;
+    name : Text;
+    range : Text;
+    school : Text
+  };
+type SrdSpell__944084874 =
+  {
+    castingTime : Text;
+    components : Text;
+    damageEffect : Text;
+    description : Text;
+    duration : Text;
+    level : Nat;
+    name : Text;
+    range : Text;
+    school : Text
+  };
+type SummoningLogEntry__31396524 =
+  {
+    armyId : Text;
+    binder : Text;
+    date : Text;
+    entityName : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    purpose : Text;
+    status : Text
+  };
+type SupplyConsumptionEntry__638528325 =
+  {
+    ammoConsumed : Nat;
+    date : Text;
+    foodConsumed : Nat;
+    id : Text;
+    notes : Text
+  };
+type SupplyLine__634555787 =
+  {id : Text; notes : Text; route : Text; vulnerabilities : Text};
+type SupplyRoute__727971064 =
+  {
+    fromLocationId : Text;
+    id : Text;
+    notes : Text;
+    status : Text;
+    toLocationId : Text
+  };
+type TabNote__1031652787 =
+  {
+    characterId : CharacterId__426727889;
+    content : Text;
+    id : Nat;
+    tabName : Text
+  };
+type ThemeSettings__870651084 = {accentColor : Text; themePreset : Text};
+type TimelineEvent__651740779 =
+  {
+    armies : [Text];
+    category : Text;
+    characters : [Text];
+    date : Text;
+    description : Text;
+    id : Text;
+    linkedFactionId : ?Nat;
+    linkedLocationId : ?Nat;
+    owner : Principal;
+    title : Text
+  };
+type TrainingCertification__981187287 =
+  {
+    armyId : Text;
+    certName : Text;
+    completionDate : Text;
+    expiresDate : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    soldierId : Text;
+    soldierName : Text;
+    trainer : Text
+  };
+type TraitId__879451767 = Nat;
+type Trait__1035200951 =
+  {
+    characterId : CharacterId__426727889;
+    description : Text;
+    name : Text;
+    source : Text
+  };
+type TrophyEntry__25415143 =
+  {
+    armyId : Text;
+    battle : Text;
+    date : Text;
+    description : Text;
+    id : Text;
+    name : Text;
+    notes : Text;
+    owner : Principal;
+    takenFrom : Text
+  };
+type UserProfile__491224006 = {name : Text};
+type UserRole__1073662873 = {#admin; #guest; #user};
+type VeteranUnit__655543512 =
+  {
+    armyId : Text;
+    battleCount : Nat;
+    branchId : Text;
+    designation : Text;
+    id : Text;
+    notes : Text;
+    owner : Principal;
+    reason : Text;
+    unitName : Text
+  };
+type WarCrimeEntry__223013023 =
+  {
+    armyId : Text;
+    consequence : Text;
+    date : Text;
+    event : Text;
+    id : Text;
+    location : Text;
+    notes : Text;
+    owner : Principal;
+    perpetrators : Text
+  };
+type WeatherEntry__6633737 =
+  {
+    effects : Text;
+    endDate : Text;
+    id : Nat;
+    notes : Text;
+    owner : Principal;
+    season : Text;
+    startDate : Text;
+    weatherType : Text
+  };
+type WhistleblowerEntry__653310264 =
+  {
+    armyId : Text;
+    contained : Bool;
+    date : Text;
+    id : Text;
+    incident : Text;
+    notes : Text;
+    owner : Principal;
+    source : Text
+  };
+type XpState__943323396 =
+  {
+    characterId : CharacterId__426727889;
+    milestoneMode : Bool;
+    milestoneNotes : Text;
+    totalXpEarned : Nat;
+    xp : Nat
+  };
+actor ({
+  stable XP_LEVEL_THRESHOLDS : [Nat];
+  stable var _settings : {maxLevel : Nat};
+  stable accessControlState :
+    {
+      var adminAssigned : Bool;
+      userRoles : Map__605269027<Principal, UserRole__1073662873>
+    };
+  stable allianceTreaties :
+    {
+      var root : Node__46230540<Text, AllianceTreaty__650767679>;
+      var size : Nat__490723111
+    };
+  stable allies :
+    {
+      var root : Node__46230540<Nat, Ally__436899841>;
+      var size : Nat__490723111
+    };
+  stable amnesticLogEntries :
+    {
+      var root : Node__46230540<Text, AmnesticLogEntry__285004916>;
+      var size : Nat__490723111
+    };
+  stable ancientHistoryEntries :
+    {
+      var root : Node__46230540<Text, AncientHistoryEntry__1001307469>;
+      var size : Nat__490723111
+    };
+  stable angelClassEntries :
+    {
+      var root : Node__46230540<Text, AngelClassEntry__949705949>;
+      var size : Nat__490723111
+    };
+  stable anomalyExposureEntries :
+    {
+      var root : Node__46230540<Text, AnomalyExposureEntry__850981435>;
+      var size : Nat__490723111
+    };
+  stable appReminders :
+    {
+      var root : Node__46230540<Text, AppReminder__1047821781>;
+      var size : Nat__490723111
+    };
+  in armies :
+    Map__605269027<Text,
+                    {
+                      alliedArmies :
+                        [{
+                           allegiance : Text;
+                           commander : Text;
+                           id : Text;
+                           name : Text;
+                           notes : Text;
+                           size : Nat
+                         }];
+                      armyAbilities :
+                        [{
+                           cost : Text;
+                           description : Text;
+                           effect : Text;
+                           id : Text;
+                           name : Text
+                         }];
+                      armyNotes :
+                        {
+                          battlePlannerNotes :
+                            [{
+                               date : Text;
+                               id : Text;
+                               notes : Text;
+                               objective : Text
+                             }];
+                          campaignLog :
+                            [{date : Text; entry : Text; id : Text}];
+                          generalNotes : Text
+                        };
+                      banner : Text;
+                      branches :
+                        [{
+                           abilities :
+                             [{
+                                cost : Text;
+                                description : Text;
+                                effect : Text;
+                                id : Text;
+                                name : Text
+                              }];
+                           condition : Text;
+                           deploymentLocation : Text;
+                           headcount : Nat;
+                           id : Text;
+                           interBranchNotes : Text;
+                           loadouts :
+                             [{
+                                armorType : Text;
+                                id : Text;
+                                name : Text;
+                                notes : Text;
+                                weaponType : Text
+                              }];
+                           machineryIds : [Text];
+                           name : Text;
+                           officerIds : [Text];
+                           specialties : [Text];
+                           trainingLevel : Text;
+                           veteranFlag : Bool
+                         }];
+                      characterId : Nat;
+                      commandStructure :
+                        {
+                          chainOfCommand :
+                            [{
+                               id : Text;
+                               officerId : Text;
+                               reportsToId : Text;
+                               role : Text
+                             }];
+                          ordersLog :
+                            [{
+                               date : Text;
+                               id : Text;
+                               order : Text;
+                               target : Text
+                             }]
+                        };
+                      commanderAbilities :
+                        [{
+                           cost : Text;
+                           description : Text;
+                           effect : Text;
+                           id : Text;
+                           name : Text
+                         }];
+                      commanders :
+                        [{
+                           abilities :
+                             [{
+                                cost : Text;
+                                description : Text;
+                                effect : Text;
+                                id : Text;
+                                name : Text
+                              }];
+                           background : Text;
+                           commandSkills : [Text];
+                           factionId : ?Nat;
+                           historyNotes : Text;
+                           id : Text;
+                           name : Text;
+                           rankId : Text;
+                           signatureAbility : Text
+                         }];
+                      commandingCharacterId : ?Text;
+                      condition : Text;
+                      faction : Text;
+                      foundingDate : Text;
+                      id : Text;
+                      intelligence :
+                        {
+                          enemyIntelLog :
+                            [{
+                               date : Text;
+                               enemyName : Text;
+                               id : Text;
+                               knownStrength : Text;
+                               notes : Text;
+                               weaknesses : Text
+                             }];
+                          scoutReports :
+                            [{
+                               area : Text;
+                               date : Text;
+                               findings : Text;
+                               id : Text
+                             }]
+                        };
+                      logistics :
+                        {
+                          ammunition : Nat;
+                          casualtiesLog :
+                            [{
+                               branchName : Text;
+                               date : Text;
+                               id : Text;
+                               notes : Text;
+                               troopLosses : Nat;
+                               woundedOfficers : Nat
+                             }];
+                          food : Nat;
+                          goldReserves : Nat;
+                          injuryNotes : Text;
+                          supplyLines :
+                            [{
+                               id : Text;
+                               notes : Text;
+                               route : Text;
+                               vulnerabilities : Text
+                             }]
+                        };
+                      machinery :
+                        [{
+                           condition : Text;
+                           crewSize : Nat;
+                           damageEffect : Text;
+                           id : Text;
+                           machineryType : Text;
+                           name : Text;
+                           notes : Text
+                         }];
+                      moraleData :
+                        {
+                          loyaltyTracker :
+                            [{
+                               entityName : Text;
+                               id : Text;
+                               loyaltyScore : Nat;
+                               notes : Text
+                             }];
+                          moraleEventsLog :
+                            [{
+                               date : Text;
+                               event : Text;
+                               id : Text;
+                               impact : Text
+                             }]
+                        };
+                      moraleRating : Nat;
+                      name : Text;
+                      officerAbilities :
+                        [{
+                           cost : Text;
+                           description : Text;
+                           effect : Text;
+                           id : Text;
+                           name : Text
+                         }];
+                      officers :
+                        [{
+                           background : Text;
+                           combatAbility : Nat;
+                           factionId : ?Nat;
+                           id : Text;
+                           leadership : Nat;
+                           loyalty : Nat;
+                           name : Text;
+                           notes : Text;
+                           promotionLog :
+                             [{
+                                date : Text;
+                                fromRank : Text;
+                                id : Text;
+                                notes : Text;
+                                toRank : Text
+                              }];
+                           race : Text;
+                           rankId : Text;
+                           skills : [Text]
+                         }];
+                      owner : Principal;
+                      powerLevel : Nat;
+                      race : Text;
+                      ranks :
+                        [{
+                           description : Text;
+                           id : Text;
+                           name : Text;
+                           tier : Nat;
+                           troopCount : Nat
+                         }];
+                      size : Nat;
+                      specOpsGroups :
+                        [{
+                           abilities :
+                             [{
+                                cost : Text;
+                                description : Text;
+                                effect : Text;
+                                id : Text;
+                                name : Text
+                              }];
+                           condition : Text;
+                           equipmentNotes : Text;
+                           headcount : Nat;
+                           id : Text;
+                           missionType : Text;
+                           name : Text;
+                           notes : Text;
+                           officerIds : [Text]
+                         }];
+                      specialties : [Text];
+                      status : Text;
+                      terrainNotes : Text;
+                      trainingLevel : Text;
+                      warChest : Nat
+                    }>;
+  stable armyAlignmentEntries :
+    {
+      var root : Node__46230540<Text, ArmyAlignmentEntry__434946874>;
+      var size : Nat__490723111
+    };
+  stable armyDoctrines :
+    {
+      var root : Node__46230540<Text, ArmyDoctrine__765109058>;
+      var size : Nat__490723111
+    };
+  in armyLootEntries :
+    Map__605269027<Text,
+                    {
+                      armyId : Text;
+                      dateAcquired : Text;
+                      distributed : Bool;
+                      id : Text;
+                      lootType : Text;
+                      name : Text;
+                      notes : Text;
+                      owner : Principal;
+                      quantity : Nat;
+                      source : Text;
+                      value : Nat
+                    }>;
+  stable armyMetadataMap :
+    {
+      var root : Node__46230540<Text, ArmyMetadata__26435673>;
+      var size : Nat__490723111
+    };
+  stable armyMoraleHistory :
+    {
+      var root :
+        Node__46230540<Text,
+                        List__415060402<ArmyMoraleHistoryEntry__658460375>>;
+      var size : Nat__490723111
+    };
+  stable armyOfficerSkills :
+    {
+      var root :
+        Node__46230540<Text, List__415060402<OfficerSkillEntry__856532767>>;
+      var size : Nat__490723111
+    };
+  stable armyRelationships :
+    {
+      var root :
+        Node__46230540<Text, List__415060402<ArmyRelationship__772535226>>;
+      var size : Nat__490723111
+    };
+  stable armyRivalEntries :
+    {
+      var root : Node__46230540<Text, ArmyRivalEntry__786629904>;
+      var size : Nat__490723111
+    };
+  stable armySupplyRoutes :
+    {
+      var root : Node__46230540<Text, List__415060402<SupplyRoute__727971064>>;
+      var size : Nat__490723111
+    };
+  stable ascensionLogEntries :
+    {
+      var root : Node__46230540<Text, AscensionLogEntry__621512847>;
+      var size : Nat__490723111
+    };
+  stable attunedItems :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<AttunedItem__875709364>>;
+      var size : Nat__490723111
+    };
+  stable battleEngagements :
+    {
+      var root :
+        Node__46230540<Text, List__415060402<BattleEngagement__785137708>>;
+      var size : Nat__490723111
+    };
+  stable battleOutcomes :
+    {
+      var root : Node__46230540<Nat, BattleOutcome__486297084>;
+      var size : Nat__490723111
+    };
+  stable bestiaryCreatures :
+    {
+      var root : Node__46230540<Nat, BestiaryCreature__703311533>;
+      var size : Nat__490723111
+    };
+  stable betrayalLogEntries :
+    {
+      var root : Node__46230540<Text, BetrayalLogEntry__905635462>;
+      var size : Nat__490723111
+    };
+  stable blackBudgetEntries :
+    {
+      var root : Node__46230540<Text, BlackBudgetEntry__763928713>;
+      var size : Nat__490723111
+    };
+  stable bloodOathEntries :
+    {
+      var root : Node__46230540<Text, BloodOathEntry__759940224>;
+      var size : Nat__490723111
+    };
+  stable bloodlineEntries :
+    {
+      var root : Node__46230540<Text, BloodlineEntry__891013915>;
+      var size : Nat__490723111
+    };
+  stable bountyObjectives :
+    {
+      var root : Node__46230540<Text, BountyObjective__574990962>;
+      var size : Nat__490723111
+    };
+  stable calendarEvents :
+    {
+      var root : Node__46230540<Nat, CalendarEvent__740917318>;
+      var size : Nat__490723111
+    };
+  stable campaignEnemies :
+    {
+      var root : Node__46230540<Text, CampaignEnemy__479415460>;
+      var size : Nat__490723111
+    };
+  stable campaigns :
+    {
+      var root : Node__46230540<Text, Campaign__370329394>;
+      var size : Nat__490723111
+    };
+  stable capturedEnemies :
+    {
+      var root : Node__46230540<Nat, CapturedEnemy__204238910>;
+      var size : Nat__490723111
+    };
+  stable celestialBlessings :
+    {
+      var root : Node__46230540<Text, CelestialBlessingEntry__63765181>;
+      var size : Nat__490723111
+    };
+  stable characterAbilities :
+    {
+      var root :
+        Node__46230540<CharacterAbilityId__304596555,
+                        CharacterAbility__893173401>;
+      var size : Nat__490723111
+    };
+  stable characterAppearances :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, CharacterAppearance__716627774>;
+      var size : Nat__490723111
+    };
+  stable characterConditions :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<CharacterCondition__640522102>>;
+      var size : Nat__490723111
+    };
+  stable characterCustomStats :
+    {
+      var root : Node__46230540<Nat, CharacterCustomStat__655911524>;
+      var size : Nat__490723111
+    };
+  stable characterFeats :
+    {
+      var root : Node__46230540<Nat, CharacterFeat__577775579>;
+      var size : Nat__490723111
+    };
+  stable characterInjuries :
+    {
+      var root : Node__46230540<Text, CharacterInjury__295302613>;
+      var size : Nat__490723111
+    };
+  stable characterLegacies :
+    {
+      var root : Node__46230540<Text, CharacterLegacy__1039455480>;
+      var size : Nat__490723111
+    };
+  stable characterMulticlass :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<MulticlassEntry__357766958>>;
+      var size : Nat__490723111
+    };
+  stable characterPhysicalAttacks :
+    {
+      var root :
+        Node__46230540<CharacterPhysicalAttackId__240132237,
+                        CharacterPhysicalAttack__425758798>;
+      var size : Nat__490723111
+    };
+  stable characterProficiencies :
+    {
+      var root : Node__46230540<Nat, CharacterProficiency__223642309>;
+      var size : Nat__490723111
+    };
+  stable characterRelationships :
+    {
+      var root : Node__46230540<Nat, CharacterRelationship__716299957>;
+      var size : Nat__490723111
+    };
+  stable characterSkills :
+    {
+      var root : Node__46230540<Nat, CharacterSkill__862617531>;
+      var size : Nat__490723111
+    };
+  stable characters :
+    {
+      var root : Node__46230540<CharacterId__426727889, Character__117766171>;
+      var size : Nat__490723111
+    };
+  stable classOwners :
+    {
+      var root : Node__46230540<ClassId__656678660, Principal>;
+      var size : Nat__490723111
+    };
+  stable classes :
+    {
+      var root : Node__46230540<ClassId__656678660, CustomClass__538381920>;
+      var size : Nat__490723111
+    };
+  stable clearanceLevelEntries :
+    {
+      var root : Node__46230540<Text, ClearanceLevelEntry__1064302728>;
+      var size : Nat__490723111
+    };
+  stable commendations :
+    {
+      var root : Node__46230540<Text, Commendation__809892256>;
+      var size : Nat__490723111
+    };
+  stable concentrationStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, ConcentrationState__775540737>;
+      var size : Nat__490723111
+    };
+  stable containmentBreachEntries :
+    {
+      var root : Node__46230540<Text, ContainmentBreachEntry__769678257>;
+      var size : Nat__490723111
+    };
+  stable corruptionLogEntries :
+    {
+      var root : Node__46230540<Text, CorruptionLogEntry__159159169>;
+      var size : Nat__490723111
+    };
+  stable courtMartialEntries :
+    {
+      var root : Node__46230540<Text, CourtMartialEntry__297991379>;
+      var size : Nat__490723111
+    };
+  stable currencyStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, CurrencyState__102703892>;
+      var size : Nat__490723111
+    };
+  stable cursedItemEntries :
+    {
+      var root : Node__46230540<Text, CursedItemEntry__791249268>;
+      var size : Nat__490723111
+    };
+  stable customAbilities :
+    {
+      var root :
+        Node__46230540<CustomAbilityId__516179300, CustomAbility__315544986>;
+      var size : Nat__490723111
+    };
+  stable customFeats :
+    {
+      var root : Node__46230540<Nat, CustomFeat__270370210>;
+      var size : Nat__490723111
+    };
+  stable customItems :
+    {
+      var root :
+        Node__46230540<CustomItemId__385119781, CustomItem__304457216>;
+      var size : Nat__490723111
+    };
+  stable customPhysicalAttacks :
+    {
+      var root :
+        Node__46230540<CustomPhysicalAttackId__499130487,
+                        CustomPhysicalAttack__523250891>;
+      var size : Nat__490723111
+    };
+  stable customSkills :
+    {
+      var root : Node__46230540<Nat, CustomSkill__306518523>;
+      var size : Nat__490723111
+    };
+  stable customSpellSchools :
+    {
+      var root :
+        Node__46230540<CustomSpellSchoolId__435710678,
+                        CustomSpellSchool__27635611>;
+      var size : Nat__490723111
+    };
+  stable customSpells :
+    {
+      var root :
+        Node__46230540<CustomSpellId__117275880, CustomSpell__1008158895>;
+      var size : Nat__490723111
+    };
+  stable customStats :
+    {
+      var root : Node__46230540<Nat, CustomStat__713766946>;
+      var size : Nat__490723111
+    };
+  stable darkRitualEntries :
+    {
+      var root : Node__46230540<Text, DarkRitualEntry__690927649>;
+      var size : Nat__490723111
+    };
+  stable deathSaveStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, DeathSaveState__999238564>;
+      var size : Nat__490723111
+    };
+  stable defectionEntries :
+    {
+      var root : Node__46230540<Text, DefectionEntry__779589024>;
+      var size : Nat__490723111
+    };
+  stable demonClassEntries :
+    {
+      var root : Node__46230540<Text, DemonClassEntry__459184084>;
+      var size : Nat__490723111
+    };
+  stable deploymentMapNotes :
+    {
+      var root : Node__46230540<Text, DeploymentMapNote__459819488>;
+      var size : Nat__490723111
+    };
+  stable diplomacyLog :
+    {
+      var root : Node__46230540<Text, DiplomacyEntry__706385042>;
+      var size : Nat__490723111
+    };
+  stable divineMandateEntries :
+    {
+      var root : Node__46230540<Text, DivineMandateEntry__979997539>;
+      var size : Nat__490723111
+    };
+  stable dreamVisionEntries :
+    {
+      var root : Node__46230540<Text, DreamVisionEntry__256913405>;
+      var size : Nat__490723111
+    };
+  in encounterLog :
+    Map__605269027<Text,
+                    {
+                      campaignId : ?Text;
+                      date : Text;
+                      difficulty : Text;
+                      id : Text;
+                      linkedNpcIds : [Nat];
+                      locationId : ?Nat;
+                      name : Text;
+                      notes : Text;
+                      outcome : Text;
+                      owner : Principal;
+                      xpAwarded : Nat
+                    }>;
+  stable enemyProfiles :
+    {
+      var root : Node__46230540<Text, EnemyProfile__642145032>;
+      var size : Nat__490723111
+    };
+  stable equipmentSlots :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<EquipmentSlot__1036044446>>;
+      var size : Nat__490723111
+    };
+  stable espionageEntries :
+    {
+      var root : Node__46230540<Text, EspionageEntry__616356928>;
+      var size : Nat__490723111
+    };
+  stable ethicsReviewEntries :
+    {
+      var root : Node__46230540<Text, EthicsReviewEntry__1028472317>;
+      var size : Nat__490723111
+    };
+  stable factions :
+    {
+      var root : Node__46230540<Nat, Faction__393925317>;
+      var size : Nat__490723111
+    };
+  stable fallenSoldierEntries :
+    {
+      var root : Node__46230540<Text, FallenSoldierEntry__1014548072>;
+      var size : Nat__490723111
+    };
+  in gainLossEntries :
+    Map__605269027<Text,
+                    {
+                      armyId : Text;
+                      enemyName : Text;
+                      gains :
+                        {
+                          equipmentNotes : Text;
+                          gold : Nat;
+                          intel : Text;
+                          officersCasualties : Text;
+                          other : Text;
+                          prisoners : Nat;
+                          supplies : Nat;
+                          territory : Text;
+                          troops : Nat
+                        };
+                      id : Text;
+                      interactionType : Text;
+                      linkedFactionId : ?Nat;
+                      losses :
+                        {
+                          equipmentNotes : Text;
+                          gold : Nat;
+                          intel : Text;
+                          officersCasualties : Text;
+                          other : Text;
+                          prisoners : Nat;
+                          supplies : Nat;
+                          territory : Text;
+                          troops : Nat
+                        };
+                      moraleApplied : Bool;
+                      moraleImpact : Int;
+                      notes : Text;
+                      outcome : Text;
+                      owner : Principal;
+                      timestamp : Text
+                    }>;
+  stable holyRelicEntries :
+    {
+      var root : Node__46230540<Text, HolyRelicEntry__721549440>;
+      var size : Nat__490723111
+    };
+  stable holyWarEntries :
+    {
+      var root : Node__46230540<Text, HolyWarEntry__710118938>;
+      var size : Nat__490723111
+    };
+  stable hpStates :
+    {
+      var root : Node__46230540<CharacterId__426727889, HPState__443063384>;
+      var size : Nat__490723111
+    };
+  stable infernalDebtEntries :
+    {
+      var root : Node__46230540<Text, InfernalDebtEntry__118560708>;
+      var size : Nat__490723111
+    };
+  stable initiativeTrackers :
+    {
+      var root : Node__46230540<Text, InitiativeTracker__691507297>;
+      var size : Nat__490723111
+    };
+  stable inspirationStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, InspirationState__90715924>;
+      var size : Nat__490723111
+    };
+  stable interPresetWarEntries :
+    {
+      var root : Node__46230540<Text, InterPresetWarEntry__443531547>;
+      var size : Nat__490723111
+    };
+  stable inventoryItems :
+    {
+      var root :
+        Node__46230540<InventoryItemId__305587598, InventoryItem__576608082>;
+      var size : Nat__490723111
+    };
+  stable languages :
+    {
+      var root : Node__46230540<Nat, Language__38428764>;
+      var size : Nat__490723111
+    };
+  stable locationDungeonRooms :
+    {
+      var root : Node__46230540<Text, List__415060402<DungeonRoom__553387850>>;
+      var size : Nat__490723111
+    };
+  in locations :
+    Map__605269027<Text,
+                    {
+                      description : Text;
+                      factionId : ?Nat;
+                      id : Text;
+                      locationType : Text;
+                      name : Text;
+                      notes : Text;
+                      owner : Principal;
+                      region : Text;
+                      visitedDate : Text
+                    }>;
+  stable lootDistributionLog :
+    {
+      var root : Node__46230540<Text, LootDistributionEntry__687268189>;
+      var size : Nat__490723111
+    };
+  stable loreEntries :
+    {
+      var root : Node__46230540<Text, LoreEntry__986537718>;
+      var size : Nat__490723111
+    };
+  stable lostKnowledgeEntries :
+    {
+      var root : Node__46230540<Text, LostKnowledgeEntry__989877398>;
+      var size : Nat__490723111
+    };
+  stable miaEntries :
+    {
+      var root : Node__46230540<Text, MIAEntry__48436285>;
+      var size : Nat__490723111
+    };
+  stable mythologicalFigures :
+    {
+      var root : Node__46230540<Text, MythologicalFigure__476502942>;
+      var size : Nat__490723111
+    };
+  stable var nextAllianceTreatyId : Nat;
+  stable var nextAllyId : Nat;
+  stable var nextAmnesticLogId : Nat;
+  stable var nextAncientHistoryId : Nat;
+  stable var nextAngelClassId : Nat;
+  stable var nextAnomalyExposureId : Nat;
+  stable var nextArmyDoctrineId : Nat;
+  stable var nextArmyId : Nat;
+  stable var nextArmyLootId : Nat;
+  stable var nextArmyRivalId : Nat;
+  stable var nextAscensionLogId : Nat;
+  stable var nextBattleOutcomeId : Nat;
+  stable var nextBestiaryCreatureId : Nat;
+  stable var nextBetrayalLogId : Nat;
+  stable var nextBlackBudgetId : Nat;
+  stable var nextBloodOathId : Nat;
+  stable var nextBloodlineEntryId : Nat;
+  stable var nextBountyObjectiveId : Nat;
+  stable var nextCalendarEventId : Nat;
+  stable var nextCampaignEnemyId : Nat;
+  stable var nextCampaignId : Nat;
+  stable var nextCapturedEnemyId : Nat;
+  stable var nextCelestialBlessingId : Nat;
+  stable var nextCharacterAbilityId : Nat;
+  stable var nextCharacterCustomStatId : Nat;
+  stable var nextCharacterFeatId : Nat;
+  stable var nextCharacterId : Nat;
+  stable var nextCharacterInjuryId : Nat;
+  stable var nextCharacterLegacyId : Nat;
+  stable var nextCharacterPhysicalAttackId : Nat;
+  stable var nextCharacterProficiencyId : Nat;
+  stable var nextCharacterRelationshipId : Nat;
+  stable var nextCharacterSkillId : Nat;
+  stable var nextClassId : Nat;
+  stable var nextClearanceLevelId : Nat;
+  stable var nextCommendationId : Nat;
+  stable var nextContainmentBreachId : Nat;
+  stable var nextCorruptionLogId : Nat;
+  stable var nextCourtMartialId : Nat;
+  stable var nextCursedItemEntryId : Nat;
+  stable var nextCustomAbilityId : Nat;
+  stable var nextCustomFeatId : Nat;
+  stable var nextCustomItemId : Nat;
+  stable var nextCustomPhysicalAttackId : Nat;
+  stable var nextCustomSkillId : Nat;
+  stable var nextCustomSpellId : Nat;
+  stable var nextCustomSpellSchoolId : Nat;
+  stable var nextCustomStatId : Nat;
+  stable var nextDarkRitualId : Nat;
+  stable var nextDefectionEntryId : Nat;
+  stable var nextDemonClassId : Nat;
+  stable var nextDeploymentNoteId : Nat;
+  stable var nextDiplomacyEntryId : Nat;
+  stable var nextDivineMandateId : Nat;
+  stable var nextDreamVisionEntryId : Nat;
+  stable var nextEncounterEntryId : Nat;
+  stable var nextEnemyProfileId : Nat;
+  stable var nextEspionageEntryId : Nat;
+  stable var nextEthicsReviewId : Nat;
+  stable var nextFactionId : Nat;
+  stable var nextFallenSoldierId : Nat;
+  stable var nextGainLossId : Nat;
+  stable var nextHolyRelicId : Nat;
+  stable var nextHolyWarId : Nat;
+  stable var nextInfernalDebtId : Nat;
+  stable var nextInterPresetWarId : Nat;
+  stable var nextItemId : Nat;
+  stable var nextLanguageId : Nat;
+  stable var nextLocationId : Nat;
+  stable var nextLoreEntryId : Nat;
+  stable var nextLostKnowledgeId : Nat;
+  stable var nextMIAEntryId : Nat;
+  stable var nextMythologicalFigureId : Nat;
+  stable var nextNPCId : Nat;
+  stable var nextPactContractId : Nat;
+  stable var nextPartyInventoryItemId : Nat;
+  stable var nextPartyNoteId : Nat;
+  stable var nextPersonalLootId : Nat;
+  stable var nextPortalEntryId : Nat;
+  stable var nextPrayerLogId : Nat;
+  stable var nextPrisonerExchangeId : Nat;
+  stable var nextProphecyEntryId : Nat;
+  stable var nextProtocolLogId : Nat;
+  stable var nextPsychEvalId : Nat;
+  stable var nextRaceId : Nat;
+  stable var nextRealmTerritoryId : Nat;
+  stable var nextReclassificationId : Nat;
+  stable var nextRivalEntryId : Nat;
+  stable var nextScpObjectId : Nat;
+  stable var nextSecretMissionId : Nat;
+  stable var nextSessionEntryId : Nat;
+  stable var nextSiegeEntryId : Nat;
+  stable var nextSinCorruptionId : Nat;
+  stable var nextSiteAssignmentId : Nat;
+  stable var nextSoldierBioId : Nat;
+  stable var nextSoulBountyId : Nat;
+  stable var nextSpellId : Nat;
+  stable var nextSummoningLogId : Nat;
+  stable var nextTabNoteId : Nat;
+  stable var nextTimelineEventId : Nat;
+  stable var nextTrainingCertId : Nat;
+  stable var nextTraitId : Nat;
+  stable var nextTrophyEntryId : Nat;
+  stable var nextVeteranUnitId : Nat;
+  stable var nextWarCrimeId : Nat;
+  stable var nextWeatherEntryId : Nat;
+  stable var nextWhistleblowerId : Nat;
+  in npcs :
+    Map__605269027<Text,
+                    {
+                      description : Text;
+                      factionId : ?Nat;
+                      id : Text;
+                      location : Text;
+                      locationId : ?Nat;
+                      name : Text;
+                      notes : Text;
+                      owner : Principal;
+                      race : Text;
+                      relationship : Text
+                    }>;
+  stable officerDuels :
+    {
+      var root : Node__46230540<Text, List__415060402<OfficerDuel__508869176>>;
+      var size : Nat__490723111
+    };
+  stable pactContractEntries :
+    {
+      var root : Node__46230540<Text, PactContractEntry__642260290>;
+      var size : Nat__490723111
+    };
+  stable partyInventory :
+    {
+      var root : Node__46230540<Text, PartyInventoryItem__507118309>;
+      var size : Nat__490723111
+    };
+  stable partyNotes :
+    {
+      var root : Node__46230540<Text, PartyNote__570920119>;
+      var size : Nat__490723111
+    };
+  stable partyXpEntries :
+    {
+      var root : Node__46230540<Text, PartyXpEntry__872691350>;
+      var size : Nat__490723111
+    };
+  in personalLootEntries :
+    Map__605269027<Text,
+                    {
+                      characterId : Nat;
+                      dateAcquired : Text;
+                      id : Text;
+                      kept : Bool;
+                      lootType : Text;
+                      name : Text;
+                      notes : Text;
+                      owner : Principal;
+                      quantity : Nat;
+                      source : Text;
+                      value : Nat
+                    }>;
+  stable planeRealmEntries :
+    {
+      var root : Node__46230540<Text, PlaneRealmEntry__1023493949>;
+      var size : Nat__490723111
+    };
+  stable portalEntries :
+    {
+      var root : Node__46230540<Text, PortalEntry__1063905695>;
+      var size : Nat__490723111
+    };
+  stable prayerLogEntries :
+    {
+      var root : Node__46230540<Text, PrayerLogEntry__225020167>;
+      var size : Nat__490723111
+    };
+  stable preparedSpells :
+    {
+      var root : Node__46230540<CharacterId__426727889, List__415060402<Text>>;
+      var size : Nat__490723111
+    };
+  in prisonerExchanges :
+    Map__605269027<Text,
+                    {
+                      armyId : Text;
+                      capturedDate : Text;
+                      capturedFrom : Text;
+                      exchangeDetails : Text;
+                      id : Text;
+                      notes : Text;
+                      owner : Principal;
+                      prisonerFaction : Text;
+                      prisonerName : Text;
+                      prisonerRank : Text;
+                      ransomAmount : Nat;
+                      status : Text
+                    }>;
+  stable prophecyEntries :
+    {
+      var root : Node__46230540<Text, ProphecyEntry__736886886>;
+      var size : Nat__490723111
+    };
+  stable protocolLogEntries :
+    {
+      var root : Node__46230540<Text, ProtocolLogEntry__17530565>;
+      var size : Nat__490723111
+    };
+  stable psychEvalEntries :
+    {
+      var root : Node__46230540<Text, PsychEvalEntry__49550207>;
+      var size : Nat__490723111
+    };
+  in quests :
+    Map__605269027<Nat,
+                    List__415060402<{
+                                      description : Text;
+                                      id : Text;
+                                      linkedFactionIds : [Nat];
+                                      linkedNpcIds : [Nat];
+                                      notes : Text;
+                                      objectives : Text;
+                                      reward : Text;
+                                      status : Text;
+                                      title : Text
+                                    }>>;
+  stable raceLinkedContent :
+    {
+      var root :
+        Node__46230540<RaceId__245902189, RaceLinkedContent__560405931>;
+      var size : Nat__490723111
+    };
+  stable raceOwners :
+    {
+      var root : Node__46230540<RaceId__245902189, Principal>;
+      var size : Nat__490723111
+    };
+  stable races :
+    {
+      var root : Node__46230540<RaceId__245902189, CustomRace__529220210>;
+      var size : Nat__490723111
+    };
+  stable realmTerritoryEntries :
+    {
+      var root : Node__46230540<Text, RealmTerritoryEntry__366318469>;
+      var size : Nat__490723111
+    };
+  stable reclassificationEntries :
+    {
+      var root : Node__46230540<Text, ReclassificationEntry__169886748>;
+      var size : Nat__490723111
+    };
+  stable recruitmentLogs :
+    {
+      var root :
+        Node__46230540<Text, List__415060402<RecruitmentEntry__504771073>>;
+      var size : Nat__490723111
+    };
+  stable restStates :
+    {
+      var root : Node__46230540<CharacterId__426727889, RestState__727316523>;
+      var size : Nat__490723111
+    };
+  in rivalEntries :
+    Map__605269027<Text,
+                    {
+                      backstory : Text;
+                      characterId : Nat;
+                      currentLocation : Text;
+                      faction : Text;
+                      id : Text;
+                      linkedFactionId : ?Nat;
+                      losses : Nat;
+                      name : Text;
+                      notes : Text;
+                      owner : Principal;
+                      personalHistory : Text;
+                      rivalType : Text;
+                      status : Text;
+                      threatLevel : Text;
+                      wins : Nat
+                    }>;
+  stable saveThrowStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, SaveThrowState__662216248>;
+      var size : Nat__490723111
+    };
+  stable scpObjectEntries :
+    {
+      var root : Node__46230540<Text, ScpObjectEntry__236681481>;
+      var size : Nat__490723111
+    };
+  stable secretMissionLogs :
+    {
+      var root : Node__46230540<Text, SecretMissionLog__703830613>;
+      var size : Nat__490723111
+    };
+  in sessionLog :
+    Map__605269027<Text,
+                    {
+                      campaignId : ?Text;
+                      date : Text;
+                      id : Text;
+                      linkedEncounterIds : [Nat];
+                      linkedNpcIds : [Nat];
+                      linkedQuestIds : [Nat];
+                      loot : Text;
+                      notes : Text;
+                      owner : Principal;
+                      summary : Text;
+                      title : Text;
+                      xpGained : Nat
+                    }>;
+  stable siegeEntries :
+    {
+      var root : Node__46230540<Text, SiegeEntry__465583606>;
+      var size : Nat__490723111
+    };
+  stable sinCorruptionEntries :
+    {
+      var root : Node__46230540<Text, SinCorruptionEntry__275892720>;
+      var size : Nat__490723111
+    };
+  stable siteAssignmentEntries :
+    {
+      var root : Node__46230540<Text, SiteAssignmentEntry__391706247>;
+      var size : Nat__490723111
+    };
+  stable soldierBios :
+    {
+      var root : Node__46230540<Text, SoldierBio__542605080>;
+      var size : Nat__490723111
+    };
+  stable soulBountyEntries :
+    {
+      var root : Node__46230540<Text, SoulBountyEntry__38274228>;
+      var size : Nat__490723111
+    };
+  stable spellSlotStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<SpellSlotState__1007298311>>;
+      var size : Nat__490723111
+    };
+  stable spells :
+    {
+      var root : Node__46230540<SpellId__158347786, Spell__51044746>;
+      var size : Nat__490723111
+    };
+  stable srdSpells :
+    {
+      var root : Node__46230540<Nat, SrdSpell__944084874>;
+      var size : Nat__490723111
+    };
+  stable var srdSpellsInitialized : Bool;
+  stable summoningLogEntries :
+    {
+      var root : Node__46230540<Text, SummoningLogEntry__31396524>;
+      var size : Nat__490723111
+    };
+  stable supplyConsumptionLogs :
+    {
+      var root :
+        Node__46230540<Text,
+                        List__415060402<SupplyConsumptionEntry__638528325>>;
+      var size : Nat__490723111
+    };
+  stable tabNotes :
+    {
+      var root : Node__46230540<Text, TabNote__1031652787>;
+      var size : Nat__490723111
+    };
+  stable themeSettings :
+    {
+      var root : Node__46230540<Principal, ThemeSettings__870651084>;
+      var size : Nat__490723111
+    };
+  in timelineEvents :
+    Map__605269027<Text,
+                    {
+                      armies : [Text];
+                      category : Text;
+                      characters : [Text];
+                      date : Text;
+                      description : Text;
+                      id : Text;
+                      linkedFactionId : ?Nat;
+                      linkedLocationId : ?Nat;
+                      owner : Principal;
+                      title : Text
+                    }>;
+  stable trainingCertifications :
+    {
+      var root : Node__46230540<Text, TrainingCertification__981187287>;
+      var size : Nat__490723111
+    };
+  stable traits :
+    {
+      var root : Node__46230540<TraitId__879451767, Trait__1035200951>;
+      var size : Nat__490723111
+    };
+  stable trophyEntries :
+    {
+      var root : Node__46230540<Text, TrophyEntry__25415143>;
+      var size : Nat__490723111
+    };
+  stable userProfiles :
+    {
+      var root : Node__46230540<Principal, UserProfile__491224006>;
+      var size : Nat__490723111
+    };
+  stable userSettings :
+    {
+      var root : Node__46230540<Principal, Settings__774731784>;
+      var size : Nat__490723111
+    };
+  stable veteranUnits :
+    {
+      var root : Node__46230540<Text, VeteranUnit__655543512>;
+      var size : Nat__490723111
+    };
+  stable warCrimeEntries :
+    {
+      var root : Node__46230540<Text, WarCrimeEntry__223013023>;
+      var size : Nat__490723111
+    };
+  stable weatherEntries :
+    {
+      var root : Node__46230540<Nat, WeatherEntry__6633737>;
+      var size : Nat__490723111
+    };
+  stable whistleblowerEntries :
+    {
+      var root : Node__46230540<Text, WhistleblowerEntry__653310264>;
+      var size : Nat__490723111
+    };
+  stable xpStates :
+    {
+      var root : Node__46230540<CharacterId__426727889, XpState__943323396>;
+      var size : Nat__490723111
+    }
+}, {
+  stable XP_LEVEL_THRESHOLDS : [Nat];
+  stable var _settings : {maxLevel : Nat};
+  stable accessControlState :
+    {
+      var adminAssigned : Bool;
+      userRoles : Map__605269027<Principal, UserRole__1073662873>
+    };
+  stable allianceTreaties :
+    {
+      var root : Node__46230540<Text, AllianceTreaty__650767679>;
+      var size : Nat__490723111
+    };
+  stable allies :
+    {
+      var root : Node__46230540<Nat, Ally__436899841>;
+      var size : Nat__490723111
+    };
+  stable amnesticLogEntries :
+    {
+      var root : Node__46230540<Text, AmnesticLogEntry__285004916>;
+      var size : Nat__490723111
+    };
+  stable ancientHistoryEntries :
+    {
+      var root : Node__46230540<Text, AncientHistoryEntry__1001307469>;
+      var size : Nat__490723111
+    };
+  stable angelClassEntries :
+    {
+      var root : Node__46230540<Text, AngelClassEntry__949705949>;
+      var size : Nat__490723111
+    };
+  stable anomalyExposureEntries :
+    {
+      var root : Node__46230540<Text, AnomalyExposureEntry__850981435>;
+      var size : Nat__490723111
+    };
+  stable appReminders :
+    {
+      var root : Node__46230540<Text, AppReminder__1047821781>;
+      var size : Nat__490723111
+    };
+  stable armies :
+    {
+      var root : Node__46230540<Text, Army__411922605>;
+      var size : Nat__490723111
+    };
+  stable armyAlignmentEntries :
+    {
+      var root : Node__46230540<Text, ArmyAlignmentEntry__434946874>;
+      var size : Nat__490723111
+    };
+  stable armyDoctrines :
+    {
+      var root : Node__46230540<Text, ArmyDoctrine__765109058>;
+      var size : Nat__490723111
+    };
+  stable armyLootEntries :
+    {
+      var root : Node__46230540<Text, ArmyLootEntry__73362404>;
+      var size : Nat__490723111
+    };
+  stable armyMetadataMap :
+    {
+      var root : Node__46230540<Text, ArmyMetadata__26435673>;
+      var size : Nat__490723111
+    };
+  stable armyMoraleHistory :
+    {
+      var root :
+        Node__46230540<Text,
+                        List__415060402<ArmyMoraleHistoryEntry__658460375>>;
+      var size : Nat__490723111
+    };
+  stable armyOfficerSkills :
+    {
+      var root :
+        Node__46230540<Text, List__415060402<OfficerSkillEntry__856532767>>;
+      var size : Nat__490723111
+    };
+  stable armyRelationships :
+    {
+      var root :
+        Node__46230540<Text, List__415060402<ArmyRelationship__772535226>>;
+      var size : Nat__490723111
+    };
+  stable armyRivalEntries :
+    {
+      var root : Node__46230540<Text, ArmyRivalEntry__786629904>;
+      var size : Nat__490723111
+    };
+  stable armySupplyRoutes :
+    {
+      var root : Node__46230540<Text, List__415060402<SupplyRoute__727971064>>;
+      var size : Nat__490723111
+    };
+  stable ascensionLogEntries :
+    {
+      var root : Node__46230540<Text, AscensionLogEntry__621512847>;
+      var size : Nat__490723111
+    };
+  stable attunedItems :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<AttunedItem__875709364>>;
+      var size : Nat__490723111
+    };
+  stable battleEngagements :
+    {
+      var root :
+        Node__46230540<Text, List__415060402<BattleEngagement__785137708>>;
+      var size : Nat__490723111
+    };
+  stable battleOutcomes :
+    {
+      var root : Node__46230540<Nat, BattleOutcome__486297084>;
+      var size : Nat__490723111
+    };
+  stable bestiaryCreatures :
+    {
+      var root : Node__46230540<Nat, BestiaryCreature__703311533>;
+      var size : Nat__490723111
+    };
+  stable betrayalLogEntries :
+    {
+      var root : Node__46230540<Text, BetrayalLogEntry__905635462>;
+      var size : Nat__490723111
+    };
+  stable blackBudgetEntries :
+    {
+      var root : Node__46230540<Text, BlackBudgetEntry__763928713>;
+      var size : Nat__490723111
+    };
+  stable bloodOathEntries :
+    {
+      var root : Node__46230540<Text, BloodOathEntry__759940224>;
+      var size : Nat__490723111
+    };
+  stable bloodlineEntries :
+    {
+      var root : Node__46230540<Text, BloodlineEntry__891013915>;
+      var size : Nat__490723111
+    };
+  stable bountyObjectives :
+    {
+      var root : Node__46230540<Text, BountyObjective__574990962>;
+      var size : Nat__490723111
+    };
+  stable calendarEvents :
+    {
+      var root : Node__46230540<Nat, CalendarEvent__740917318>;
+      var size : Nat__490723111
+    };
+  stable campaignEnemies :
+    {
+      var root : Node__46230540<Text, CampaignEnemy__479415460>;
+      var size : Nat__490723111
+    };
+  stable campaigns :
+    {
+      var root : Node__46230540<Text, Campaign__370329394>;
+      var size : Nat__490723111
+    };
+  stable capturedEnemies :
+    {
+      var root : Node__46230540<Nat, CapturedEnemy__204238910>;
+      var size : Nat__490723111
+    };
+  stable celestialBlessings :
+    {
+      var root : Node__46230540<Text, CelestialBlessingEntry__63765181>;
+      var size : Nat__490723111
+    };
+  stable characterAbilities :
+    {
+      var root :
+        Node__46230540<CharacterAbilityId__304596555,
+                        CharacterAbility__893173401>;
+      var size : Nat__490723111
+    };
+  stable characterAppearances :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, CharacterAppearance__716627774>;
+      var size : Nat__490723111
+    };
+  stable characterConditions :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<CharacterCondition__640522102>>;
+      var size : Nat__490723111
+    };
+  stable characterCustomStats :
+    {
+      var root : Node__46230540<Nat, CharacterCustomStat__655911524>;
+      var size : Nat__490723111
+    };
+  stable characterFeats :
+    {
+      var root : Node__46230540<Nat, CharacterFeat__577775579>;
+      var size : Nat__490723111
+    };
+  stable characterInjuries :
+    {
+      var root : Node__46230540<Text, CharacterInjury__295302613>;
+      var size : Nat__490723111
+    };
+  stable characterLegacies :
+    {
+      var root : Node__46230540<Text, CharacterLegacy__1039455480>;
+      var size : Nat__490723111
+    };
+  stable characterMulticlass :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<MulticlassEntry__357766958>>;
+      var size : Nat__490723111
+    };
+  stable characterPhysicalAttacks :
+    {
+      var root :
+        Node__46230540<CharacterPhysicalAttackId__240132237,
+                        CharacterPhysicalAttack__425758798>;
+      var size : Nat__490723111
+    };
+  stable characterProficiencies :
+    {
+      var root : Node__46230540<Nat, CharacterProficiency__223642309>;
+      var size : Nat__490723111
+    };
+  stable characterRelationships :
+    {
+      var root : Node__46230540<Nat, CharacterRelationship__716299957>;
+      var size : Nat__490723111
+    };
+  stable characterSkills :
+    {
+      var root : Node__46230540<Nat, CharacterSkill__862617531>;
+      var size : Nat__490723111
+    };
+  stable characters :
+    {
+      var root : Node__46230540<CharacterId__426727889, Character__117766171>;
+      var size : Nat__490723111
+    };
+  stable classOwners :
+    {
+      var root : Node__46230540<ClassId__656678660, Principal>;
+      var size : Nat__490723111
+    };
+  stable classes :
+    {
+      var root : Node__46230540<ClassId__656678660, CustomClass__538381920>;
+      var size : Nat__490723111
+    };
+  stable clearanceLevelEntries :
+    {
+      var root : Node__46230540<Text, ClearanceLevelEntry__1064302728>;
+      var size : Nat__490723111
+    };
+  stable commendations :
+    {
+      var root : Node__46230540<Text, Commendation__809892256>;
+      var size : Nat__490723111
+    };
+  stable concentrationStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, ConcentrationState__775540737>;
+      var size : Nat__490723111
+    };
+  stable containmentBreachEntries :
+    {
+      var root : Node__46230540<Text, ContainmentBreachEntry__769678257>;
+      var size : Nat__490723111
+    };
+  stable corruptionLogEntries :
+    {
+      var root : Node__46230540<Text, CorruptionLogEntry__159159169>;
+      var size : Nat__490723111
+    };
+  stable courtMartialEntries :
+    {
+      var root : Node__46230540<Text, CourtMartialEntry__297991379>;
+      var size : Nat__490723111
+    };
+  stable currencyStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, CurrencyState__102703892>;
+      var size : Nat__490723111
+    };
+  stable cursedItemEntries :
+    {
+      var root : Node__46230540<Text, CursedItemEntry__791249268>;
+      var size : Nat__490723111
+    };
+  stable customAbilities :
+    {
+      var root :
+        Node__46230540<CustomAbilityId__516179300, CustomAbility__315544986>;
+      var size : Nat__490723111
+    };
+  stable customFeats :
+    {
+      var root : Node__46230540<Nat, CustomFeat__270370210>;
+      var size : Nat__490723111
+    };
+  stable customItems :
+    {
+      var root :
+        Node__46230540<CustomItemId__385119781, CustomItem__304457216>;
+      var size : Nat__490723111
+    };
+  stable customPhysicalAttacks :
+    {
+      var root :
+        Node__46230540<CustomPhysicalAttackId__499130487,
+                        CustomPhysicalAttack__523250891>;
+      var size : Nat__490723111
+    };
+  stable customSkills :
+    {
+      var root : Node__46230540<Nat, CustomSkill__306518523>;
+      var size : Nat__490723111
+    };
+  stable customSpellSchools :
+    {
+      var root :
+        Node__46230540<CustomSpellSchoolId__435710678,
+                        CustomSpellSchool__27635611>;
+      var size : Nat__490723111
+    };
+  stable customSpells :
+    {
+      var root :
+        Node__46230540<CustomSpellId__117275880, CustomSpell__1008158895>;
+      var size : Nat__490723111
+    };
+  stable customStats :
+    {
+      var root : Node__46230540<Nat, CustomStat__713766946>;
+      var size : Nat__490723111
+    };
+  stable darkRitualEntries :
+    {
+      var root : Node__46230540<Text, DarkRitualEntry__690927649>;
+      var size : Nat__490723111
+    };
+  stable deathSaveStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, DeathSaveState__999238564>;
+      var size : Nat__490723111
+    };
+  stable defectionEntries :
+    {
+      var root : Node__46230540<Text, DefectionEntry__779589024>;
+      var size : Nat__490723111
+    };
+  stable demonClassEntries :
+    {
+      var root : Node__46230540<Text, DemonClassEntry__459184084>;
+      var size : Nat__490723111
+    };
+  stable deploymentMapNotes :
+    {
+      var root : Node__46230540<Text, DeploymentMapNote__459819488>;
+      var size : Nat__490723111
+    };
+  stable diplomacyLog :
+    {
+      var root : Node__46230540<Text, DiplomacyEntry__706385042>;
+      var size : Nat__490723111
+    };
+  stable divineMandateEntries :
+    {
+      var root : Node__46230540<Text, DivineMandateEntry__979997539>;
+      var size : Nat__490723111
+    };
+  stable dreamVisionEntries :
+    {
+      var root : Node__46230540<Text, DreamVisionEntry__256913405>;
+      var size : Nat__490723111
+    };
+  stable encounterLog :
+    {
+      var root : Node__46230540<Text, EncounterEntry__554250843>;
+      var size : Nat__490723111
+    };
+  stable enemyProfiles :
+    {
+      var root : Node__46230540<Text, EnemyProfile__642145032>;
+      var size : Nat__490723111
+    };
+  stable equipmentSlots :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<EquipmentSlot__1036044446>>;
+      var size : Nat__490723111
+    };
+  stable espionageEntries :
+    {
+      var root : Node__46230540<Text, EspionageEntry__616356928>;
+      var size : Nat__490723111
+    };
+  stable ethicsReviewEntries :
+    {
+      var root : Node__46230540<Text, EthicsReviewEntry__1028472317>;
+      var size : Nat__490723111
+    };
+  stable factions :
+    {
+      var root : Node__46230540<Nat, Faction__393925317>;
+      var size : Nat__490723111
+    };
+  stable fallenSoldierEntries :
+    {
+      var root : Node__46230540<Text, FallenSoldierEntry__1014548072>;
+      var size : Nat__490723111
+    };
+  stable gainLossEntries :
+    {
+      var root : Node__46230540<Text, GainLossEntry__731396528>;
+      var size : Nat__490723111
+    };
+  stable holyRelicEntries :
+    {
+      var root : Node__46230540<Text, HolyRelicEntry__721549440>;
+      var size : Nat__490723111
+    };
+  stable holyWarEntries :
+    {
+      var root : Node__46230540<Text, HolyWarEntry__710118938>;
+      var size : Nat__490723111
+    };
+  stable hpStates :
+    {
+      var root : Node__46230540<CharacterId__426727889, HPState__443063384>;
+      var size : Nat__490723111
+    };
+  stable infernalDebtEntries :
+    {
+      var root : Node__46230540<Text, InfernalDebtEntry__118560708>;
+      var size : Nat__490723111
+    };
+  stable initiativeTrackers :
+    {
+      var root : Node__46230540<Text, InitiativeTracker__691507297>;
+      var size : Nat__490723111
+    };
+  stable inspirationStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, InspirationState__90715924>;
+      var size : Nat__490723111
+    };
+  stable interPresetWarEntries :
+    {
+      var root : Node__46230540<Text, InterPresetWarEntry__443531547>;
+      var size : Nat__490723111
+    };
+  stable inventoryItems :
+    {
+      var root :
+        Node__46230540<InventoryItemId__305587598, InventoryItem__576608082>;
+      var size : Nat__490723111
+    };
+  stable languages :
+    {
+      var root : Node__46230540<Nat, Language__38428764>;
+      var size : Nat__490723111
+    };
+  stable locationDungeonRooms :
+    {
+      var root : Node__46230540<Text, List__415060402<DungeonRoom__553387850>>;
+      var size : Nat__490723111
+    };
+  stable locations :
+    {
+      var root : Node__46230540<Text, Location__31265466>;
+      var size : Nat__490723111
+    };
+  stable lootDistributionLog :
+    {
+      var root : Node__46230540<Text, LootDistributionEntry__687268189>;
+      var size : Nat__490723111
+    };
+  stable loreEntries :
+    {
+      var root : Node__46230540<Text, LoreEntry__986537718>;
+      var size : Nat__490723111
+    };
+  stable lostKnowledgeEntries :
+    {
+      var root : Node__46230540<Text, LostKnowledgeEntry__989877398>;
+      var size : Nat__490723111
+    };
+  stable miaEntries :
+    {
+      var root : Node__46230540<Text, MIAEntry__48436285>;
+      var size : Nat__490723111
+    };
+  stable mythologicalFigures :
+    {
+      var root : Node__46230540<Text, MythologicalFigure__476502942>;
+      var size : Nat__490723111
+    };
+  stable var nextAllianceTreatyId : Nat;
+  stable var nextAllyId : Nat;
+  stable var nextAmnesticLogId : Nat;
+  stable var nextAncientHistoryId : Nat;
+  stable var nextAngelClassId : Nat;
+  stable var nextAnomalyExposureId : Nat;
+  stable var nextArmyDoctrineId : Nat;
+  stable var nextArmyId : Nat;
+  stable var nextArmyLootId : Nat;
+  stable var nextArmyRivalId : Nat;
+  stable var nextAscensionLogId : Nat;
+  stable var nextBattleOutcomeId : Nat;
+  stable var nextBestiaryCreatureId : Nat;
+  stable var nextBetrayalLogId : Nat;
+  stable var nextBlackBudgetId : Nat;
+  stable var nextBloodOathId : Nat;
+  stable var nextBloodlineEntryId : Nat;
+  stable var nextBountyObjectiveId : Nat;
+  stable var nextCalendarEventId : Nat;
+  stable var nextCampaignEnemyId : Nat;
+  stable var nextCampaignId : Nat;
+  stable var nextCapturedEnemyId : Nat;
+  stable var nextCelestialBlessingId : Nat;
+  stable var nextCharacterAbilityId : Nat;
+  stable var nextCharacterCustomStatId : Nat;
+  stable var nextCharacterFeatId : Nat;
+  stable var nextCharacterId : Nat;
+  stable var nextCharacterInjuryId : Nat;
+  stable var nextCharacterLegacyId : Nat;
+  stable var nextCharacterPhysicalAttackId : Nat;
+  stable var nextCharacterProficiencyId : Nat;
+  stable var nextCharacterRelationshipId : Nat;
+  stable var nextCharacterSkillId : Nat;
+  stable var nextClassId : Nat;
+  stable var nextClearanceLevelId : Nat;
+  stable var nextCommendationId : Nat;
+  stable var nextContainmentBreachId : Nat;
+  stable var nextCorruptionLogId : Nat;
+  stable var nextCourtMartialId : Nat;
+  stable var nextCursedItemEntryId : Nat;
+  stable var nextCustomAbilityId : Nat;
+  stable var nextCustomFeatId : Nat;
+  stable var nextCustomItemId : Nat;
+  stable var nextCustomPhysicalAttackId : Nat;
+  stable var nextCustomSkillId : Nat;
+  stable var nextCustomSpellId : Nat;
+  stable var nextCustomSpellSchoolId : Nat;
+  stable var nextCustomStatId : Nat;
+  stable var nextDarkRitualId : Nat;
+  stable var nextDefectionEntryId : Nat;
+  stable var nextDemonClassId : Nat;
+  stable var nextDeploymentNoteId : Nat;
+  stable var nextDiplomacyEntryId : Nat;
+  stable var nextDivineMandateId : Nat;
+  stable var nextDreamVisionEntryId : Nat;
+  stable var nextEncounterEntryId : Nat;
+  stable var nextEnemyProfileId : Nat;
+  stable var nextEspionageEntryId : Nat;
+  stable var nextEthicsReviewId : Nat;
+  stable var nextFactionId : Nat;
+  stable var nextFallenSoldierId : Nat;
+  stable var nextGainLossId : Nat;
+  stable var nextHolyRelicId : Nat;
+  stable var nextHolyWarId : Nat;
+  stable var nextInfernalDebtId : Nat;
+  stable var nextInterPresetWarId : Nat;
+  stable var nextItemId : Nat;
+  stable var nextLanguageId : Nat;
+  stable var nextLocationId : Nat;
+  stable var nextLoreEntryId : Nat;
+  stable var nextLostKnowledgeId : Nat;
+  stable var nextMIAEntryId : Nat;
+  stable var nextMythologicalFigureId : Nat;
+  stable var nextNPCId : Nat;
+  stable var nextPactContractId : Nat;
+  stable var nextPartyInventoryItemId : Nat;
+  stable var nextPartyNoteId : Nat;
+  stable var nextPersonalLootId : Nat;
+  stable var nextPortalEntryId : Nat;
+  stable var nextPrayerLogId : Nat;
+  stable var nextPrisonerExchangeId : Nat;
+  stable var nextProphecyEntryId : Nat;
+  stable var nextProtocolLogId : Nat;
+  stable var nextPsychEvalId : Nat;
+  stable var nextRaceId : Nat;
+  stable var nextRealmTerritoryId : Nat;
+  stable var nextReclassificationId : Nat;
+  stable var nextRivalEntryId : Nat;
+  stable var nextScpObjectId : Nat;
+  stable var nextSecretMissionId : Nat;
+  stable var nextSessionEntryId : Nat;
+  stable var nextSiegeEntryId : Nat;
+  stable var nextSinCorruptionId : Nat;
+  stable var nextSiteAssignmentId : Nat;
+  stable var nextSoldierBioId : Nat;
+  stable var nextSoulBountyId : Nat;
+  stable var nextSpellId : Nat;
+  stable var nextSummoningLogId : Nat;
+  stable var nextTabNoteId : Nat;
+  stable var nextTimelineEventId : Nat;
+  stable var nextTrainingCertId : Nat;
+  stable var nextTraitId : Nat;
+  stable var nextTrophyEntryId : Nat;
+  stable var nextVeteranUnitId : Nat;
+  stable var nextWarCrimeId : Nat;
+  stable var nextWeatherEntryId : Nat;
+  stable var nextWhistleblowerId : Nat;
+  stable npcs :
+    {
+      var root : Node__46230540<Text, NPC__663166745>;
+      var size : Nat__490723111
+    };
+  stable officerDuels :
+    {
+      var root : Node__46230540<Text, List__415060402<OfficerDuel__508869176>>;
+      var size : Nat__490723111
+    };
+  stable pactContractEntries :
+    {
+      var root : Node__46230540<Text, PactContractEntry__642260290>;
+      var size : Nat__490723111
+    };
+  stable partyInventory :
+    {
+      var root : Node__46230540<Text, PartyInventoryItem__507118309>;
+      var size : Nat__490723111
+    };
+  stable partyNotes :
+    {
+      var root : Node__46230540<Text, PartyNote__570920119>;
+      var size : Nat__490723111
+    };
+  stable partyXpEntries :
+    {
+      var root : Node__46230540<Text, PartyXpEntry__872691350>;
+      var size : Nat__490723111
+    };
+  stable personalLootEntries :
+    {
+      var root : Node__46230540<Text, PersonalLootEntry__250366300>;
+      var size : Nat__490723111
+    };
+  stable planeRealmEntries :
+    {
+      var root : Node__46230540<Text, PlaneRealmEntry__1023493949>;
+      var size : Nat__490723111
+    };
+  stable portalEntries :
+    {
+      var root : Node__46230540<Text, PortalEntry__1063905695>;
+      var size : Nat__490723111
+    };
+  stable prayerLogEntries :
+    {
+      var root : Node__46230540<Text, PrayerLogEntry__225020167>;
+      var size : Nat__490723111
+    };
+  stable preparedSpells :
+    {
+      var root : Node__46230540<CharacterId__426727889, List__415060402<Text>>;
+      var size : Nat__490723111
+    };
+  stable prisonerExchanges :
+    {
+      var root : Node__46230540<Text, PrisonerExchangeEntry__1011972065>;
+      var size : Nat__490723111
+    };
+  stable prophecyEntries :
+    {
+      var root : Node__46230540<Text, ProphecyEntry__736886886>;
+      var size : Nat__490723111
+    };
+  stable protocolLogEntries :
+    {
+      var root : Node__46230540<Text, ProtocolLogEntry__17530565>;
+      var size : Nat__490723111
+    };
+  stable psychEvalEntries :
+    {
+      var root : Node__46230540<Text, PsychEvalEntry__49550207>;
+      var size : Nat__490723111
+    };
+  stable quests :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<Quest__148507700>>;
+      var size : Nat__490723111
+    };
+  stable raceLinkedContent :
+    {
+      var root :
+        Node__46230540<RaceId__245902189, RaceLinkedContent__560405931>;
+      var size : Nat__490723111
+    };
+  stable raceOwners :
+    {
+      var root : Node__46230540<RaceId__245902189, Principal>;
+      var size : Nat__490723111
+    };
+  stable races :
+    {
+      var root : Node__46230540<RaceId__245902189, CustomRace__529220210>;
+      var size : Nat__490723111
+    };
+  stable realmTerritoryEntries :
+    {
+      var root : Node__46230540<Text, RealmTerritoryEntry__366318469>;
+      var size : Nat__490723111
+    };
+  stable reclassificationEntries :
+    {
+      var root : Node__46230540<Text, ReclassificationEntry__169886748>;
+      var size : Nat__490723111
+    };
+  stable recruitmentLogs :
+    {
+      var root :
+        Node__46230540<Text, List__415060402<RecruitmentEntry__504771073>>;
+      var size : Nat__490723111
+    };
+  stable restStates :
+    {
+      var root : Node__46230540<CharacterId__426727889, RestState__727316523>;
+      var size : Nat__490723111
+    };
+  stable rivalEntries :
+    {
+      var root : Node__46230540<Text, RivalEntry__337403685>;
+      var size : Nat__490723111
+    };
+  stable saveThrowStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889, SaveThrowState__662216248>;
+      var size : Nat__490723111
+    };
+  stable scpObjectEntries :
+    {
+      var root : Node__46230540<Text, ScpObjectEntry__236681481>;
+      var size : Nat__490723111
+    };
+  stable secretMissionLogs :
+    {
+      var root : Node__46230540<Text, SecretMissionLog__703830613>;
+      var size : Nat__490723111
+    };
+  stable sessionLog :
+    {
+      var root : Node__46230540<Text, SessionEntry__220828534>;
+      var size : Nat__490723111
+    };
+  stable siegeEntries :
+    {
+      var root : Node__46230540<Text, SiegeEntry__465583606>;
+      var size : Nat__490723111
+    };
+  stable sinCorruptionEntries :
+    {
+      var root : Node__46230540<Text, SinCorruptionEntry__275892720>;
+      var size : Nat__490723111
+    };
+  stable siteAssignmentEntries :
+    {
+      var root : Node__46230540<Text, SiteAssignmentEntry__391706247>;
+      var size : Nat__490723111
+    };
+  stable soldierBios :
+    {
+      var root : Node__46230540<Text, SoldierBio__542605080>;
+      var size : Nat__490723111
+    };
+  stable soulBountyEntries :
+    {
+      var root : Node__46230540<Text, SoulBountyEntry__38274228>;
+      var size : Nat__490723111
+    };
+  stable spellSlotStates :
+    {
+      var root :
+        Node__46230540<CharacterId__426727889,
+                        List__415060402<SpellSlotState__1007298311>>;
+      var size : Nat__490723111
+    };
+  stable spells :
+    {
+      var root : Node__46230540<SpellId__158347786, Spell__51044746>;
+      var size : Nat__490723111
+    };
+  stable srdSpells :
+    {
+      var root : Node__46230540<Nat, SrdSpell__944084874>;
+      var size : Nat__490723111
+    };
+  stable var srdSpellsInitialized : Bool;
+  stable summoningLogEntries :
+    {
+      var root : Node__46230540<Text, SummoningLogEntry__31396524>;
+      var size : Nat__490723111
+    };
+  stable supplyConsumptionLogs :
+    {
+      var root :
+        Node__46230540<Text,
+                        List__415060402<SupplyConsumptionEntry__638528325>>;
+      var size : Nat__490723111
+    };
+  stable tabNotes :
+    {
+      var root : Node__46230540<Text, TabNote__1031652787>;
+      var size : Nat__490723111
+    };
+  stable themeSettings :
+    {
+      var root : Node__46230540<Principal, ThemeSettings__870651084>;
+      var size : Nat__490723111
+    };
+  stable timelineEvents :
+    {
+      var root : Node__46230540<Text, TimelineEvent__651740779>;
+      var size : Nat__490723111
+    };
+  stable trainingCertifications :
+    {
+      var root : Node__46230540<Text, TrainingCertification__981187287>;
+      var size : Nat__490723111
+    };
+  stable traits :
+    {
+      var root : Node__46230540<TraitId__879451767, Trait__1035200951>;
+      var size : Nat__490723111
+    };
+  stable trophyEntries :
+    {
+      var root : Node__46230540<Text, TrophyEntry__25415143>;
+      var size : Nat__490723111
+    };
+  stable userProfiles :
+    {
+      var root : Node__46230540<Principal, UserProfile__491224006>;
+      var size : Nat__490723111
+    };
+  stable userSettings :
+    {
+      var root : Node__46230540<Principal, Settings__774731784>;
+      var size : Nat__490723111
+    };
+  stable veteranUnits :
+    {
+      var root : Node__46230540<Text, VeteranUnit__655543512>;
+      var size : Nat__490723111
+    };
+  stable warCrimeEntries :
+    {
+      var root : Node__46230540<Text, WarCrimeEntry__223013023>;
+      var size : Nat__490723111
+    };
+  stable weatherEntries :
+    {
+      var root : Node__46230540<Nat, WeatherEntry__6633737>;
+      var size : Nat__490723111
+    };
+  stable whistleblowerEntries :
+    {
+      var root : Node__46230540<Text, WhistleblowerEntry__653310264>;
+      var size : Nat__490723111
+    };
+  stable xpStates :
+    {
+      var root : Node__46230540<CharacterId__426727889, XpState__943323396>;
+      var size : Nat__490723111
+    }
+});

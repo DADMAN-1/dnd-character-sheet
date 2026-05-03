@@ -1,0 +1,2538 @@
+type XpState = 
+ record {
+   characterId: CharacterId;
+   milestoneMode: bool;
+   milestoneNotes: text;
+   totalXpEarned: nat;
+   xp: nat;
+ };
+type WhistleblowerEntry = 
+ record {
+   armyId: text;
+   contained: bool;
+   date: text;
+   id: text;
+   incident: text;
+   notes: text;
+   owner: principal;
+   source: text;
+ };
+type WeatherEntry = 
+ record {
+   effects: text;
+   endDate: text;
+   id: nat;
+   notes: text;
+   owner: principal;
+   season: text;
+   startDate: text;
+   weatherType: text;
+ };
+type WarCrimeEntry = 
+ record {
+   armyId: text;
+   consequence: text;
+   date: text;
+   event: text;
+   id: text;
+   location: text;
+   notes: text;
+   owner: principal;
+   perpetrators: text;
+ };
+type VeteranUnit = 
+ record {
+   armyId: text;
+   battleCount: nat;
+   branchId: text;
+   designation: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   reason: text;
+   unitName: text;
+ };
+type UserRole = 
+ variant {
+   admin;
+   guest;
+   user;
+ };
+type UserProfile = record {name: text;};
+type TrophyEntry = 
+ record {
+   armyId: text;
+   battle: text;
+   date: text;
+   description: text;
+   id: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   takenFrom: text;
+ };
+type TraitId = nat;
+type Trait = 
+ record {
+   characterId: CharacterId;
+   description: text;
+   name: text;
+   source: text;
+ };
+type TrainingCertification = 
+ record {
+   armyId: text;
+   certName: text;
+   completionDate: text;
+   expiresDate: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   soldierId: text;
+   soldierName: text;
+   trainer: text;
+ };
+type TimelineEvent = 
+ record {
+   armies: vec text;
+   category: text;
+   characters: vec text;
+   date: text;
+   description: text;
+   id: text;
+   linkedFactionId: opt nat;
+   linkedLocationId: opt nat;
+   owner: principal;
+   title: text;
+ };
+type ThemeSettings = 
+ record {
+   accentColor: text;
+   themePreset: text;
+ };
+type TabNote = 
+ record {
+   characterId: CharacterId;
+   content: text;
+   id: nat;
+   tabName: text;
+ };
+type SupplyRoute = 
+ record {
+   fromLocationId: text;
+   id: text;
+   notes: text;
+   status: text;
+   toLocationId: text;
+ };
+type SupplyLine = 
+ record {
+   id: text;
+   notes: text;
+   route: text;
+   vulnerabilities: text;
+ };
+type SupplyConsumptionEntry = 
+ record {
+   ammoConsumed: nat;
+   date: text;
+   foodConsumed: nat;
+   id: text;
+   notes: text;
+ };
+type SummoningLogEntry = 
+ record {
+   armyId: text;
+   binder: text;
+   date: text;
+   entityName: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   purpose: text;
+   status: text;
+ };
+type SrdSpell = 
+ record {
+   castingTime: text;
+   components: text;
+   damageEffect: text;
+   description: text;
+   duration: text;
+   level: nat;
+   name: text;
+   range: text;
+   school: text;
+ };
+type SpellSlotState = 
+ record {
+   characterId: CharacterId;
+   spellLevel: nat;
+   total: nat;
+   used: nat;
+ };
+type SpellId = nat;
+type Spell = 
+ record {
+   castingTime: text;
+   characterId: CharacterId;
+   components: text;
+   damageEffect: text;
+   description: text;
+   duration: text;
+   level: nat;
+   name: text;
+   range: text;
+   school: text;
+ };
+type SpecOpsGroup = 
+ record {
+   abilities: vec ArmyAbility;
+   condition: text;
+   equipmentNotes: text;
+   headcount: nat;
+   id: text;
+   missionType: text;
+   name: text;
+   notes: text;
+   officerIds: vec text;
+ };
+type SoulBountyEntry = 
+ record {
+   armyId: text;
+   bountyType: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   status: text;
+   targetName: text;
+   value: text;
+ };
+type SoldierBio = 
+ record {
+   armyId: text;
+   backstory: text;
+   bio: text;
+   branch: text;
+   id: text;
+   notableHistory: text;
+   owner: principal;
+   rank: text;
+   soldierId: text;
+   soldierName: text;
+ };
+type Skills = 
+ record {
+   acrobatics: bool;
+   animalHandling: bool;
+   arcana: bool;
+   athletics: bool;
+   deception: bool;
+   description: text;
+   history: bool;
+   insight: bool;
+   intimidation: bool;
+   investigation: bool;
+   medicine: bool;
+   nature: bool;
+   perception: bool;
+   performance: bool;
+   persuasion: bool;
+   religion: bool;
+   sleightOfHand: bool;
+   stealth: bool;
+   survival: bool;
+ };
+type SiteAssignmentEntry = 
+ record {
+   armyId: text;
+   assignedDate: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   personnelName: text;
+   site: text;
+ };
+type SinCorruptionEntry = 
+ record {
+   armyId: text;
+   date: text;
+   exposureType: text;
+   id: text;
+   level: nat;
+   notes: text;
+   owner: principal;
+   soldierName: text;
+ };
+type SiegeEntry = 
+ record {
+   armyId: text;
+   breaches: text;
+   endDate: text;
+   id: text;
+   notes: text;
+   outcome: text;
+   owner: principal;
+   resourcesConsumed: text;
+   startDate: text;
+   target: text;
+ };
+type Settings = record {maxLevel: nat;};
+type SessionEntry = 
+ record {
+   campaignId: opt text;
+   date: text;
+   id: text;
+   linkedEncounterIds: vec nat;
+   linkedNpcIds: vec nat;
+   linkedQuestIds: vec nat;
+   loot: text;
+   notes: text;
+   owner: principal;
+   summary: text;
+   title: text;
+   xpGained: nat;
+ };
+type SecretMissionLog = 
+ record {
+   armyId: text;
+   classification: text;
+   date: text;
+   id: text;
+   notes: text;
+   objective: text;
+   outcome: text;
+   owner: principal;
+   participants: text;
+   title: text;
+ };
+type ScpObjectEntry = 
+ record {
+   armyId: text;
+   designation: text;
+   id: text;
+   location: text;
+   notes: text;
+   objectClass: text;
+   owner: principal;
+   status: text;
+ };
+type ScoutReport = 
+ record {
+   area: text;
+   date: text;
+   findings: text;
+   id: text;
+ };
+type SaveThrowState = 
+ record {
+   chaProf: bool;
+   characterId: CharacterId;
+   conProf: bool;
+   dexProf: bool;
+   intProf: bool;
+   strProf: bool;
+   wisProf: bool;
+ };
+type RivalEntry = 
+ record {
+   backstory: text;
+   characterId: CharacterId;
+   currentLocation: text;
+   faction: text;
+   id: text;
+   linkedFactionId: opt nat;
+   losses: nat;
+   name: text;
+   notes: text;
+   owner: principal;
+   personalHistory: text;
+   rivalType: text;
+   status: text;
+   threatLevel: text;
+   wins: nat;
+ };
+type RestState = 
+ record {
+   lastLongRestDate: opt text;
+   longRestsUsed: nat;
+   shortRestsUsed: nat;
+ };
+type RecruitmentEntry = 
+ record {
+   amount: nat;
+   date: text;
+   id: text;
+   location: text;
+   method: text;
+   notes: text;
+ };
+type ReclassificationEntry = 
+ record {
+   armyId: text;
+   date: text;
+   fromClass: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   reason: text;
+   subject: text;
+   toClass: text;
+ };
+type RealmTerritoryEntry = 
+ record {
+   armyId: text;
+   contested: bool;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   realm: text;
+   status: text;
+ };
+type RaceLinkedContent = 
+ record {
+   linkedAbilityIds: vec CustomAbilityId;
+   linkedAttackIds: vec CustomPhysicalAttackId;
+   linkedSpellIds: vec CustomSpellId;
+ };
+type RaceId = nat;
+type Quest = 
+ record {
+   description: text;
+   id: text;
+   linkedFactionIds: vec nat;
+   linkedNpcIds: vec nat;
+   notes: text;
+   objectives: text;
+   reward: text;
+   status: text;
+   title: text;
+ };
+type PsychEvalEntry = 
+ record {
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   personnelName: text;
+   result: text;
+   reviewer: text;
+ };
+type ProtocolLogEntry = 
+ record {
+   armyId: text;
+   date: text;
+   id: text;
+   invokedBy: text;
+   notes: text;
+   owner: principal;
+   protocol: text;
+   reason: text;
+   status: text;
+ };
+type ProphecyEntry = 
+ record {
+   date: text;
+   fulfilled: bool;
+   fulfillmentNotes: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   relatedCharacters: text;
+   relatedFactions: text;
+   source: text;
+   "text": text;
+ };
+type PrisonerExchangeEntry = 
+ record {
+   armyId: text;
+   capturedDate: text;
+   capturedFrom: text;
+   exchangeDetails: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   prisonerFaction: text;
+   prisonerName: text;
+   prisonerRank: text;
+   ransomAmount: nat;
+   status: text;
+ };
+type PrayerLogEntry = 
+ record {
+   answered: bool;
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   prayer: text;
+ };
+type PortalEntry = 
+ record {
+   campaignId: opt text;
+   condition: text;
+   fromLocation: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   portalName: text;
+   portalType: text;
+   toLocation: text;
+ };
+type PlaneRealmEntry = 
+ record {
+   id: text;
+   owner: principal;
+   planesOrRealms: vec PlaneRealm;
+ };
+type PlaneRealm = 
+ record {
+   description: text;
+   linkedLocations: text;
+   name: text;
+   notes: text;
+   planeType: text;
+   traits: text;
+ };
+type PersonalLootEntry = 
+ record {
+   characterId: CharacterId;
+   dateAcquired: text;
+   id: text;
+   kept: bool;
+   lootType: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   quantity: nat;
+   source: text;
+   value: nat;
+ };
+type PartyXpEntry = 
+ record {
+   id: text;
+   notes: text;
+   sessionId: text;
+   timestamp: int;
+   xpEarned: nat;
+ };
+type PartyNote = 
+ record {
+   content: text;
+   createdAt: text;
+   id: text;
+   owner: principal;
+   title: text;
+ };
+type PartyInventoryItem = 
+ record {
+   description: text;
+   id: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   quantity: nat;
+   value: text;
+   weight: text;
+ };
+type PactContractEntry = 
+ record {
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   parties: text;
+   signed: bool;
+   status: text;
+   terms: text;
+ };
+type OrderEntry = 
+ record {
+   date: text;
+   id: text;
+   order: text;
+   target: text;
+ };
+type OfficerSkillEntry = 
+ record {
+   armyId: nat;
+   officerId: text;
+   skills: vec OfficerSkill;
+ };
+type OfficerSkill = 
+ record {
+   effect: text;
+   rating: nat;
+   skillName: text;
+ };
+type OfficerPromotion = 
+ record {
+   date: text;
+   fromRank: text;
+   id: text;
+   notes: text;
+   toRank: text;
+ };
+type OfficerDuel = 
+ record {
+   date: text;
+   id: text;
+   notes: text;
+   officer1: text;
+   officer2: text;
+   outcome: text;
+ };
+type NPC = 
+ record {
+   description: text;
+   factionId: opt nat;
+   id: text;
+   location: text;
+   locationId: opt nat;
+   name: text;
+   notes: text;
+   owner: principal;
+   race: text;
+   relationship: text;
+ };
+type MythologicalFigure = 
+ record {
+   domain: text;
+   figureType: text;
+   id: text;
+   mythology: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   powers: text;
+   relationships: text;
+ };
+type MulticlassEntry = 
+ record {
+   className: text;
+   id: text;
+   isSpellcaster: bool;
+   level: nat;
+   spellcastingMod: text;
+ };
+type MoraleEvent = 
+ record {
+   date: text;
+   event: text;
+   id: text;
+   impact: text;
+ };
+type MIAEntry = 
+ record {
+   armyId: text;
+   circumstances: text;
+   dateLastSeen: text;
+   id: text;
+   lastKnownLocation: text;
+   notes: text;
+   owner: principal;
+   resolvedDate: text;
+   soldierId: text;
+   soldierName: text;
+   status: text;
+ };
+type LoyaltyEntry = 
+ record {
+   entityName: text;
+   id: text;
+   loyaltyScore: nat;
+   notes: text;
+ };
+type LostKnowledgeEntry = 
+ record {
+   category: text;
+   condition: text;
+   description: text;
+   discoveredBy: text;
+   discoveredDate: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   title: text;
+ };
+type LoreEntry = 
+ record {
+   category: text;
+   content: text;
+   createdAt: text;
+   id: text;
+   owner: principal;
+   title: text;
+ };
+type LootDistributionEntry = 
+ record {
+   id: text;
+   itemName: text;
+   notes: text;
+   quantity: nat;
+   recipient: text;
+   timestamp: int;
+ };
+type Location = 
+ record {
+   description: text;
+   factionId: opt nat;
+   id: text;
+   locationType: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   region: text;
+   visitedDate: text;
+ };
+type Language = 
+ record {
+   characterId: CharacterId;
+   id: nat;
+   name: text;
+ };
+type InventoryItemId = nat;
+type InventoryItem = 
+ record {
+   characterId: CharacterId;
+   description: text;
+   equipped: bool;
+   name: text;
+   quantity: nat;
+   weight: nat;
+ };
+type InterPresetWarEntry = 
+ record {
+   army1Name: text;
+   army2Name: text;
+   conflictName: text;
+   endDate: text;
+   id: text;
+   notes: text;
+   outcome: text;
+   owner: principal;
+   preset1: text;
+   preset2: text;
+   startDate: text;
+ };
+type InspirationState = 
+ record {
+   labelText: text;
+   points: nat;
+ };
+type InitiativeTracker = 
+ record {
+   currentTurnIndex: nat;
+   encounterId: text;
+   entries: vec InitiativeEntry;
+   id: text;
+   roundNumber: nat;
+ };
+type InitiativeEntry = 
+ record {
+   conditions: vec text;
+   currentHp: nat;
+   dexModifier: int;
+   id: text;
+   initiativeRoll: int;
+   isPlayer: bool;
+   maxHp: nat;
+   name: text;
+ };
+type InfernalDebtEntry = 
+ record {
+   armyId: text;
+   creditor: text;
+   date: text;
+   debtor: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   status: text;
+   terms: text;
+ };
+type ImportCharacterInput = 
+ record {
+   ac: nat;
+   alignment: text;
+   background: text;
+   cha: nat;
+   characterClass: text;
+   con: nat;
+   dex: nat;
+   gender: text;
+   gold: nat;
+   hpCurrent: nat;
+   hpMax: nat;
+   initiative: nat;
+   "int": nat;
+   level: nat;
+   name: text;
+   notes: text;
+   portraitUrl: text;
+   proficiencyBonus: nat;
+   race: text;
+   skills: Skills;
+   speed: nat;
+   spellSlots: vec nat;
+   str: nat;
+   wis: nat;
+ };
+type HolyWarEntry = 
+ record {
+   armyId: text;
+   date: text;
+   id: text;
+   justification: text;
+   notes: text;
+   owner: principal;
+   status: text;
+   warName: text;
+ };
+type HolyRelicEntry = 
+ record {
+   armyId: text;
+   description: text;
+   holder: text;
+   id: text;
+   name: text;
+   notes: text;
+   origin: text;
+   owner: principal;
+ };
+type HPState = 
+ record {
+   characterId: CharacterId;
+   hpCurrent: int;
+   hpMax: nat;
+   hpTemp: nat;
+ };
+type GainLossEntry = 
+ record {
+   armyId: text;
+   enemyName: text;
+   gains: GainLossDetails;
+   id: text;
+   interactionType: text;
+   linkedFactionId: opt nat;
+   losses: GainLossDetails;
+   moraleApplied: bool;
+   moraleImpact: int;
+   notes: text;
+   outcome: text;
+   owner: principal;
+   timestamp: text;
+ };
+type GainLossDetails = 
+ record {
+   equipmentNotes: text;
+   gold: nat;
+   intel: text;
+   officersCasualties: text;
+   other: text;
+   prisoners: nat;
+   supplies: nat;
+   territory: text;
+   troops: nat;
+ };
+type FallenSoldierEntry = 
+ record {
+   armyId: text;
+   cause: text;
+   date: text;
+   id: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   rank: text;
+ };
+type Faction = 
+ record {
+   alignment: text;
+   armyAffiliations: text;
+   characterAffiliations: text;
+   description: text;
+   goals: text;
+   id: nat;
+   name: text;
+   notes: text;
+   owner: principal;
+   relationships: text;
+ };
+type EthicsReviewEntry = 
+ record {
+   action: text;
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   recommendation: text;
+   reviewer: text;
+ };
+type EspionageEntry = 
+ record {
+   agentName: text;
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   operationType: text;
+   outcome: text;
+   owner: principal;
+   target: text;
+ };
+type EquipmentSlot = 
+ record {
+   id: text;
+   itemId: opt text;
+   itemName: text;
+   notes: text;
+   slotName: text;
+ };
+type EnemyProfile = 
+ record {
+   armyId: text;
+   description: text;
+   draws: nat;
+   enemyType: text;
+   faction: text;
+   id: text;
+   knownStrengths: text;
+   knownWeaknesses: text;
+   losses: nat;
+   name: text;
+   notes: text;
+   owner: principal;
+   wins: nat;
+ };
+type EnemyIntelEntry = 
+ record {
+   date: text;
+   enemyName: text;
+   id: text;
+   knownStrength: text;
+   notes: text;
+   weaknesses: text;
+ };
+type EncounterEntry = 
+ record {
+   campaignId: opt text;
+   date: text;
+   difficulty: text;
+   id: text;
+   linkedNpcIds: vec nat;
+   locationId: opt nat;
+   name: text;
+   notes: text;
+   outcome: text;
+   owner: principal;
+   xpAwarded: nat;
+ };
+type DungeonRoom = 
+ record {
+   description: text;
+   id: text;
+   name: text;
+   order: nat;
+ };
+type DreamVisionEntry = 
+ record {
+   characterId: text;
+   content: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   prophetic: bool;
+   relatedEntities: text;
+   title: text;
+   visionType: text;
+ };
+type DivineMandateEntry = 
+ record {
+   armyId: text;
+   authority: text;
+   date: text;
+   id: text;
+   mandate: text;
+   notes: text;
+   owner: principal;
+   status: text;
+ };
+type DiplomacyEntry = 
+ record {
+   armyId: text;
+   date: text;
+   id: text;
+   keyPersons: text;
+   notes: text;
+   otherArmyName: text;
+   otherFaction: text;
+   owner: principal;
+   relationshipType: text;
+   status: text;
+   terms: text;
+ };
+type DeploymentMapNote = 
+ record {
+   armyId: text;
+   branchName: text;
+   coordinatesNotes: text;
+   deploymentStatus: text;
+   id: text;
+   lastUpdated: text;
+   location: text;
+   notes: text;
+   owner: principal;
+   strategicNotes: text;
+   supplyLineStatus: text;
+   terrain: text;
+ };
+type DemonClassEntry = 
+ record {
+   abilities: text;
+   armyId: text;
+   demonType: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   soldierName: text;
+ };
+type DefectionEntry = 
+ record {
+   date: text;
+   fromArmyId: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   rank: text;
+   reason: text;
+   soldierName: text;
+   toArmyId: text;
+ };
+type DeathSaveState = 
+ record {
+   characterId: CharacterId;
+   failures: nat;
+   successes: nat;
+ };
+type DarkRitualEntry = 
+ record {
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   outcome: text;
+   owner: principal;
+   participants: text;
+   purpose: text;
+   ritualName: text;
+ };
+type CustomStat = 
+ record {
+   defaultValue: text;
+   description: text;
+   id: nat;
+   name: text;
+   owner: principal;
+ };
+type CustomSpellSchoolId = nat;
+type CustomSpellSchool = 
+ record {
+   name: text;
+   owner: principal;
+ };
+type CustomSpellId = nat;
+type CustomSpell = 
+ record {
+   castingTime: text;
+   components: text;
+   damageEffect: text;
+   description: text;
+   duration: text;
+   level: nat;
+   name: text;
+   owner: principal;
+   range: text;
+   school: text;
+ };
+type CustomSkill = 
+ record {
+   description: text;
+   id: nat;
+   name: text;
+   owner: principal;
+   statBased: text;
+ };
+type CustomRace = 
+ record {
+   abilityBonuses: Abilities;
+   description: text;
+   name: text;
+   speed: nat;
+   traits: vec Trait;
+ };
+type CustomPhysicalAttackId = nat;
+type CustomPhysicalAttack = 
+ record {
+   attackBonus: int;
+   damageDice: text;
+   damageType: text;
+   description: text;
+   name: text;
+   owner: principal;
+   properties: text;
+   range: text;
+ };
+type CustomItemId = nat;
+type CustomItem = 
+ record {
+   description: text;
+   itemType: text;
+   name: text;
+   owner: principal;
+   rarity: text;
+   value: text;
+   weight: text;
+ };
+type CustomFeat = 
+ record {
+   description: text;
+   id: nat;
+   name: text;
+   owner: principal;
+   prerequisites: text;
+ };
+type CustomClass = 
+ record {
+   description: text;
+   features: vec Trait;
+   hitDie: nat;
+   name: text;
+   proficiencies: vec text;
+ };
+type CustomAbilityId = nat;
+type CustomAbility = 
+ record {
+   abilityType: text;
+   description: text;
+   name: text;
+   owner: principal;
+   rechargeOn: text;
+   uses: nat;
+ };
+type CursedItemEntry = 
+ record {
+   acquiredDate: text;
+   characterId: text;
+   cureCondition: text;
+   cured: bool;
+   curse: text;
+   effects: text;
+   id: text;
+   itemName: text;
+   notes: text;
+   owner: principal;
+ };
+type CurrencyState = 
+ record {
+   characterId: CharacterId;
+   copper: nat;
+   electrum: nat;
+   gold: nat;
+   platinum: nat;
+   silver: nat;
+ };
+type CourtMartialEntry = 
+ record {
+   armyId: text;
+   charge: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   punishment: text;
+   soldierId: text;
+   soldierName: text;
+   verdict: text;
+ };
+type CorruptionLogEntry = 
+ record {
+   armyId: text;
+   corruptionPoints: nat;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   soldierName: text;
+   source: text;
+ };
+type ContainmentBreachEntry = 
+ record {
+   armyId: text;
+   breach: text;
+   casualties: nat;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   resolved: bool;
+   scpDesignation: text;
+ };
+type ConcentrationState = 
+ record {
+   concentrationSpellId: opt text;
+   concentrationSpellName: opt text;
+ };
+type Commendation = 
+ record {
+   armyId: text;
+   awardedBy: text;
+   date: text;
+   id: text;
+   medalName: text;
+   owner: principal;
+   reason: text;
+   soldierId: text;
+   soldierName: text;
+ };
+type ClearanceLevelEntry = 
+ record {
+   armyId: text;
+   id: text;
+   level: nat;
+   notes: text;
+   owner: principal;
+   rankCode: text;
+ };
+type ClassId = nat;
+type CharacterSkill = 
+ record {
+   characterId: CharacterId;
+   expertise: bool;
+   id: nat;
+   proficient: bool;
+   skillName: text;
+ };
+type CharacterRelationship = 
+ record {
+   characterId: text;
+   id: nat;
+   notes: text;
+   owner: principal;
+   relatedCharacterName: text;
+   relationshipType: text;
+ };
+type CharacterProficiency = 
+ record {
+   characterId: CharacterId;
+   id: nat;
+   name: text;
+   profType: text;
+ };
+type CharacterPhysicalAttackId = nat;
+type CharacterPhysicalAttack = 
+ record {
+   attackBonus: int;
+   characterId: CharacterId;
+   damageDice: text;
+   damageType: text;
+   description: text;
+   name: text;
+   properties: text;
+   range: text;
+   timesUsed: nat;
+ };
+type CharacterLegacy = 
+ record {
+   affectedEntities: text;
+   characterId: text;
+   date: text;
+   id: text;
+   impactDescription: text;
+   notes: text;
+   owner: principal;
+   title: text;
+ };
+type CharacterInjury = 
+ record {
+   characterId: CharacterId;
+   dateReceived: text;
+   description: text;
+   estimatedRecovery: text;
+   id: text;
+   injuryName: text;
+   injuryType: text;
+   owner: principal;
+   recoveryNotes: text;
+   recoveryStatus: text;
+   severity: text;
+   source: text;
+ };
+type CharacterId = nat;
+type CharacterFeat = 
+ record {
+   characterId: CharacterId;
+   description: text;
+   id: nat;
+   name: text;
+ };
+type CharacterCustomStat = 
+ record {
+   characterId: CharacterId;
+   id: nat;
+   owner: principal;
+   statId: nat;
+   statName: text;
+   value: text;
+ };
+type CharacterCondition = 
+ record {
+   autoRemoveOnRest: bool;
+   description: text;
+   duration: text;
+   id: text;
+   name: text;
+ };
+type CharacterAppearance = 
+ record {
+   age: text;
+   distinguishingMarks: text;
+   eyeColor: text;
+   hairColor: text;
+   height: text;
+   weight: text;
+ };
+type CharacterAbilityId = nat;
+type CharacterAbility = 
+ record {
+   abilityType: text;
+   characterId: CharacterId;
+   description: text;
+   name: text;
+   rechargeOn: text;
+   uses: nat;
+   usesRemaining: nat;
+ };
+type Character = 
+ record {
+   ac: nat;
+   alignment: text;
+   background: text;
+   cha: nat;
+   characterClass: text;
+   con: nat;
+   dex: nat;
+   gender: text;
+   gold: nat;
+   hpCurrent: nat;
+   hpMax: nat;
+   initiative: nat;
+   "int": nat;
+   level: nat;
+   name: text;
+   notes: text;
+   owner: principal;
+   portraitUrl: text;
+   proficiencyBonus: nat;
+   race: text;
+   skills: Skills;
+   speed: nat;
+   spellSlots: vec nat;
+   str: nat;
+   wis: nat;
+ };
+type ChainEntry = 
+ record {
+   id: text;
+   officerId: text;
+   reportsToId: text;
+   role: text;
+ };
+type CelestialBlessingEntry = 
+ record {
+   armyId: text;
+   blessingType: text;
+   date: text;
+   description: text;
+   id: text;
+   owner: principal;
+   soldierName: text;
+ };
+type CasualtyEntry = 
+ record {
+   branchName: text;
+   date: text;
+   id: text;
+   notes: text;
+   troopLosses: nat;
+   woundedOfficers: nat;
+ };
+type CapturedEnemy = 
+ record {
+   armyId: text;
+   background: text;
+   faction: text;
+   id: nat;
+   name: text;
+   notes: text;
+   owner: principal;
+   rank: text;
+   status: text;
+ };
+type CampaignLogEntry = 
+ record {
+   date: text;
+   entry: text;
+   id: text;
+ };
+type CampaignEnemy = 
+ record {
+   campaignId: text;
+   description: text;
+   draws: nat;
+   enemyType: text;
+   faction: text;
+   id: text;
+   knownStrengths: text;
+   knownWeaknesses: text;
+   linkedArmyEnemyIds: vec text;
+   losses: nat;
+   name: text;
+   notes: text;
+   owner: principal;
+   status: text;
+   wins: nat;
+ };
+type Campaign = 
+ record {
+   armyIds: vec text;
+   characterIds: vec text;
+   description: text;
+   id: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   startDate: text;
+   status: text;
+ };
+type CalendarEvent = 
+ record {
+   category: text;
+   date: text;
+   description: text;
+   id: nat;
+   linkedEncounterId: text;
+   linkedSessionId: text;
+   notes: text;
+   owner: principal;
+   title: text;
+ };
+type BountyObjective = 
+ record {
+   armyId: text;
+   completedAt: text;
+   description: text;
+   id: text;
+   notes: text;
+   objectiveType: text;
+   owner: principal;
+   reward: text;
+   status: text;
+   target: text;
+   title: text;
+ };
+type BloodlineEntry = 
+ record {
+   characterId: text;
+   description: text;
+   era: text;
+   id: text;
+   name: text;
+   notableAncestors: text;
+   notes: text;
+   owner: principal;
+   relation: text;
+ };
+type BloodOathEntry = 
+ record {
+   armyId: text;
+   breakNotes: text;
+   broken: bool;
+   conditions: text;
+   date: text;
+   id: text;
+   oathText: text;
+   owner: principal;
+   soldierId: text;
+   soldierName: text;
+   swornTo: text;
+ };
+type BlackBudgetEntry = 
+ record {
+   allocation: text;
+   amount: text;
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   purpose: text;
+ };
+type BetrayalLogEntry = 
+ record {
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   offense: text;
+   owner: principal;
+   punishment: text;
+   traitorName: text;
+ };
+type BestiaryCreature = 
+ record {
+   behaviors: text;
+   creatureType: text;
+   encounterCount: nat;
+   id: nat;
+   immunities: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   weaknesses: text;
+ };
+type BattleSimResult = 
+ record {
+   estimatedCasualties: text;
+   loserName: text;
+   notes: text;
+   outcome: text;
+   winnerName: text;
+ };
+type BattlePlanEntry = 
+ record {
+   date: text;
+   id: text;
+   notes: text;
+   objective: text;
+ };
+type BattleOutcome = 
+ record {
+   armyId: text;
+   casualties: text;
+   date: text;
+   id: nat;
+   notes: text;
+   opponent: text;
+   owner: principal;
+   result: text;
+ };
+type BattleEngagement = 
+ record {
+   date: text;
+   id: text;
+   losses: text;
+   name: text;
+   notes: text;
+   outcome: text;
+ };
+type AttunedItem = 
+ record {
+   id: text;
+   itemName: text;
+   notes: text;
+ };
+type AscensionLogEntry = 
+ record {
+   armyId: text;
+   date: text;
+   fromRank: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   reason: text;
+   soldierName: text;
+   toRank: text;
+ };
+type ArmyRivalEntry = 
+ record {
+   armyId: text;
+   id: text;
+   lossesAgainst: nat;
+   notes: text;
+   owner: principal;
+   rivalArmyId: text;
+   rivalArmyName: text;
+   rivalryNote: text;
+   startDate: text;
+   winsAgainst: nat;
+ };
+type ArmyRelationship = 
+ record {
+   armyName: text;
+   id: text;
+   notes: text;
+   relationship: text;
+ };
+type ArmyRank = 
+ record {
+   description: text;
+   id: text;
+   name: text;
+   tier: nat;
+   troopCount: nat;
+ };
+type ArmyOfficer = 
+ record {
+   background: text;
+   combatAbility: nat;
+   factionId: opt nat;
+   id: text;
+   leadership: nat;
+   loyalty: nat;
+   name: text;
+   notes: text;
+   promotionLog: vec OfficerPromotion;
+   race: text;
+   rankId: text;
+   skills: vec text;
+ };
+type ArmyNotes = 
+ record {
+   battlePlannerNotes: vec BattlePlanEntry;
+   campaignLog: vec CampaignLogEntry;
+   generalNotes: text;
+ };
+type ArmyMoraleHistoryEntry = 
+ record {
+   eventType: text;
+   modifier: int;
+   notes: text;
+   timestamp: text;
+ };
+type ArmyMoraleData = 
+ record {
+   loyaltyTracker: vec LoyaltyEntry;
+   moraleEventsLog: vec MoraleEvent;
+ };
+type ArmyMetadata = 
+ record {
+   ageDescription: text;
+   armyId: text;
+   doctrine: text;
+   foundingDate: text;
+   id: text;
+   moraleWarningEnabled: bool;
+   moraleWarningThreshold: nat;
+   owner: principal;
+   reputationNotes: text;
+   reputationScore: nat;
+ };
+type ArmyMachinery = 
+ record {
+   condition: text;
+   crewSize: nat;
+   damageEffect: text;
+   id: text;
+   machineryType: text;
+   name: text;
+   notes: text;
+ };
+type ArmyLootEntry = 
+ record {
+   armyId: text;
+   dateAcquired: text;
+   distributed: bool;
+   id: text;
+   lootType: text;
+   name: text;
+   notes: text;
+   owner: principal;
+   quantity: nat;
+   source: text;
+   value: nat;
+ };
+type ArmyLogistics = 
+ record {
+   ammunition: nat;
+   casualtiesLog: vec CasualtyEntry;
+   food: nat;
+   goldReserves: nat;
+   injuryNotes: text;
+   supplyLines: vec SupplyLine;
+ };
+type ArmyLoadout = 
+ record {
+   armorType: text;
+   id: text;
+   name: text;
+   notes: text;
+   weaponType: text;
+ };
+type ArmyIntelligence = 
+ record {
+   enemyIntelLog: vec EnemyIntelEntry;
+   scoutReports: vec ScoutReport;
+ };
+type ArmyInput = 
+ record {
+   alliedArmies: vec AlliedArmy;
+   armyAbilities: vec ArmyAbility;
+   armyNotes: ArmyNotes;
+   banner: text;
+   branches: vec ArmyBranch;
+   characterId: CharacterId;
+   commandStructure: ArmyCommandStructure;
+   commanderAbilities: vec ArmyAbility;
+   commanders: vec ArmyCommander;
+   commandingCharacterId: opt text;
+   condition: text;
+   faction: text;
+   foundingDate: text;
+   intelligence: ArmyIntelligence;
+   logistics: ArmyLogistics;
+   machinery: vec ArmyMachinery;
+   moraleData: ArmyMoraleData;
+   moraleRating: nat;
+   name: text;
+   officerAbilities: vec ArmyAbility;
+   officers: vec ArmyOfficer;
+   powerLevel: nat;
+   race: text;
+   ranks: vec ArmyRank;
+   size: nat;
+   specOpsGroups: vec SpecOpsGroup;
+   specialties: vec text;
+   status: text;
+   terrainNotes: text;
+   trainingLevel: text;
+   warChest: nat;
+ };
+type ArmyDoctrine = 
+ record {
+   armyId: text;
+   combatDoctrine: text;
+   id: text;
+   lastUpdated: text;
+   notes: text;
+   owner: principal;
+   rulesOfEngagement: text;
+   standingOrders: text;
+   title: text;
+ };
+type ArmyCommander = 
+ record {
+   abilities: vec ArmyAbility;
+   background: text;
+   commandSkills: vec text;
+   factionId: opt nat;
+   historyNotes: text;
+   id: text;
+   name: text;
+   rankId: text;
+   signatureAbility: text;
+ };
+type ArmyCommandStructure = 
+ record {
+   chainOfCommand: vec ChainEntry;
+   ordersLog: vec OrderEntry;
+ };
+type ArmyBranch = 
+ record {
+   abilities: vec ArmyAbility;
+   condition: text;
+   deploymentLocation: text;
+   headcount: nat;
+   id: text;
+   interBranchNotes: text;
+   loadouts: vec ArmyLoadout;
+   machineryIds: vec text;
+   name: text;
+   officerIds: vec text;
+   specialties: vec text;
+   trainingLevel: text;
+   veteranFlag: bool;
+ };
+type ArmyAlignmentEntry = 
+ record {
+   armyId: text;
+   ethicalAxis: text;
+   id: text;
+   lastUpdated: text;
+   moralAxis: text;
+   notes: text;
+   owner: principal;
+ };
+type ArmyAbility = 
+ record {
+   cost: text;
+   description: text;
+   effect: text;
+   id: text;
+   name: text;
+ };
+type Army = 
+ record {
+   alliedArmies: vec AlliedArmy;
+   armyAbilities: vec ArmyAbility;
+   armyNotes: ArmyNotes;
+   banner: text;
+   branches: vec ArmyBranch;
+   characterId: CharacterId;
+   commandStructure: ArmyCommandStructure;
+   commanderAbilities: vec ArmyAbility;
+   commanders: vec ArmyCommander;
+   commandingCharacterId: opt text;
+   condition: text;
+   faction: text;
+   foundingDate: text;
+   id: text;
+   intelligence: ArmyIntelligence;
+   logistics: ArmyLogistics;
+   machinery: vec ArmyMachinery;
+   moraleData: ArmyMoraleData;
+   moraleRating: nat;
+   name: text;
+   officerAbilities: vec ArmyAbility;
+   officers: vec ArmyOfficer;
+   owner: principal;
+   powerLevel: nat;
+   race: text;
+   ranks: vec ArmyRank;
+   size: nat;
+   specOpsGroups: vec SpecOpsGroup;
+   specialties: vec text;
+   status: text;
+   terrainNotes: text;
+   trainingLevel: text;
+   warChest: nat;
+ };
+type AppReminder = 
+ record {
+   eventDate: int;
+   id: text;
+   isDismissed: bool;
+   reminderNote: text;
+   title: text;
+ };
+type AnomalyExposureEntry = 
+ record {
+   anomalyType: text;
+   armyId: text;
+   date: text;
+   effects: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   personnelName: text;
+ };
+type AngelClassEntry = 
+ record {
+   angelType: text;
+   armyId: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   soldierName: text;
+ };
+type AncientHistoryEntry = 
+ record {
+   affectedFactions: text;
+   affectedLocations: text;
+   date: text;
+   description: text;
+   era: text;
+   eventTitle: text;
+   id: text;
+   notes: text;
+   owner: principal;
+ };
+type AmnesticLogEntry = 
+ record {
+   amnesticClass: text;
+   armyId: text;
+   date: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   reason: text;
+   recipient: text;
+ };
+type Ally = 
+ record {
+   characterId: CharacterId;
+   id: nat;
+   name: text;
+   notes: text;
+   relationship: text;
+ };
+type AlliedArmy = 
+ record {
+   allegiance: text;
+   commander: text;
+   id: text;
+   name: text;
+   notes: text;
+   size: nat;
+ };
+type AllianceTreaty = 
+ record {
+   armyId: text;
+   breakDate: text;
+   id: text;
+   notes: text;
+   owner: principal;
+   partyA: text;
+   partyB: text;
+   signedDate: text;
+   status: text;
+   terms: text;
+ };
+type Abilities = 
+ record {
+   cha: nat;
+   con: nat;
+   dex: nat;
+   "int": nat;
+   str: nat;
+   wis: nat;
+ };
+service : {
+  _initializeAccessControl: () -> ();
+  addAllianceTreaty: (entry: AllianceTreaty) -> (text);
+  addAlly: (characterId: CharacterId, name: text, relationship: text, notes:
+   text) -> (nat);
+  addAmnesticLogEntry: (entry: AmnesticLogEntry) -> (text);
+  addAncientHistoryEntry: (entry: AncientHistoryEntry) -> (text);
+  addAngelClassEntry: (entry: AngelClassEntry) -> (text);
+  addAnomalyExposureEntry: (entry: AnomalyExposureEntry) -> (text);
+  addArmy: (input: ArmyInput) -> (text);
+  addArmyDoctrine: (entry: ArmyDoctrine) -> (text);
+  addArmyLootEntry: (armyId: text, entry: ArmyLootEntry) -> (text);
+  addArmyMoraleEvent: (armyId: text, event: ArmyMoraleHistoryEntry) -> (bool);
+  addArmyRivalEntry: (entry: ArmyRivalEntry) -> (text);
+  addAscensionLogEntry: (entry: AscensionLogEntry) -> (text);
+  addAttunedItem: (characterId: CharacterId, item: AttunedItem) -> ();
+  addBattleEngagement: (armyId: text, engagement: BattleEngagement) -> ();
+  addBattleOutcome: (entry: BattleOutcome) -> (nat);
+  addBestiaryCreature: (entry: BestiaryCreature) -> (nat);
+  addBetrayalLogEntry: (entry: BetrayalLogEntry) -> (text);
+  addBlackBudgetEntry: (entry: BlackBudgetEntry) -> (text);
+  addBloodOathEntry: (entry: BloodOathEntry) -> (text);
+  addBloodlineEntry: (entry: BloodlineEntry) -> (text);
+  addBountyObjective: (armyId: text, obj: BountyObjective) -> (text);
+  addCalendarEvent: (entry: CalendarEvent) -> (nat);
+  addCampaign: (campaign: Campaign) -> ();
+  addCampaignEnemy: (campaignId: text, enemy: CampaignEnemy) -> (text);
+  addCapturedEnemy: (entry: CapturedEnemy) -> (nat);
+  addCelestialBlessing: (entry: CelestialBlessingEntry) -> (text);
+  addCharacterAbility: (ability: CharacterAbility) -> (CharacterAbilityId);
+  addCharacterCustomStat: (characterId: CharacterId, statId: nat, statName:
+   text, value: text) -> (nat);
+  addCharacterFeat: (characterId: CharacterId, name: text, description:
+   text) -> (nat);
+  addCharacterInjury: (characterId: CharacterId, injury: CharacterInjury) ->
+   (text);
+  addCharacterLegacy: (entry: CharacterLegacy) -> (text);
+  addCharacterPhysicalAttack: (attack: CharacterPhysicalAttack) ->
+   (CharacterPhysicalAttackId);
+  addCharacterProficiency: (characterId: CharacterId, profType: text, name:
+   text) -> (nat);
+  addCharacterRelationship: (entry: CharacterRelationship) -> (nat);
+  addCharacterSkill: (characterId: CharacterId, skillName: text, proficient:
+   bool, expertise: bool) -> (nat);
+  addClass: (cls: CustomClass) -> (ClassId);
+  addClearanceLevelEntry: (entry: ClearanceLevelEntry) -> (text);
+  addCommendation: (entry: Commendation) -> (text);
+  addContainmentBreachEntry: (entry: ContainmentBreachEntry) -> (text);
+  addCorruptionLogEntry: (entry: CorruptionLogEntry) -> (text);
+  addCourtMartialEntry: (entry: CourtMartialEntry) -> (text);
+  addCursedItemEntry: (entry: CursedItemEntry) -> (text);
+  addCustomAbility: (ability: CustomAbility) -> (CustomAbilityId);
+  addCustomFeat: (name: text, description: text, prerequisites: text) ->
+   (nat);
+  addCustomItem: (item: CustomItem) -> (CustomItemId);
+  addCustomPhysicalAttack: (attack: CustomPhysicalAttack) ->
+   (CustomPhysicalAttackId);
+  addCustomSkill: (name: text, statBased: text, description: text) -> (nat);
+  addCustomSpell: (spell: CustomSpell) -> (CustomSpellId);
+  addCustomSpellSchool: (school: CustomSpellSchool) -> (CustomSpellSchoolId);
+  addCustomStat: (name: text, description: text, defaultValue: text) -> (nat);
+  addDarkRitualEntry: (entry: DarkRitualEntry) -> (text);
+  addDefectionEntry: (entry: DefectionEntry) -> (text);
+  addDemonClassEntry: (entry: DemonClassEntry) -> (text);
+  addDeploymentNote: (armyId: text, note: DeploymentMapNote) -> (text);
+  addDiplomacyEntry: (armyId: text, entry: DiplomacyEntry) -> (text);
+  addDivineMandate: (entry: DivineMandateEntry) -> (text);
+  addDreamVisionEntry: (entry: DreamVisionEntry) -> (text);
+  addEncounterEntry: (entry: EncounterEntry) -> ();
+  addEnemyProfile: (armyId: text, profile: EnemyProfile) -> (text);
+  addEspionageEntry: (entry: EspionageEntry) -> (text);
+  addEthicsReviewEntry: (entry: EthicsReviewEntry) -> (text);
+  addFaction: (entry: Faction) -> (nat);
+  addFallenSoldier: (entry: FallenSoldierEntry) -> (text);
+  addGainLossEntry: (armyId: text, entry: GainLossEntry) -> (text);
+  addHolyRelic: (entry: HolyRelicEntry) -> (text);
+  addHolyWarEntry: (entry: HolyWarEntry) -> (text);
+  addInfernalDebtEntry: (entry: InfernalDebtEntry) -> (text);
+  addInterPresetWarEntry: (entry: InterPresetWarEntry) -> (text);
+  addItem: (item: InventoryItem) -> (InventoryItemId);
+  addLanguage: (characterId: CharacterId, name: text) -> (nat);
+  addLocation: (loc: Location) -> ();
+  addLootDistributionEntry: (entry: LootDistributionEntry) -> (bool);
+  addLoreEntry: (entry: LoreEntry) -> ();
+  addLostKnowledgeEntry: (entry: LostKnowledgeEntry) -> (text);
+  addMIAEntry: (entry: MIAEntry) -> (text);
+  addMythologicalFigure: (entry: MythologicalFigure) -> (text);
+  addNPC: (npc: NPC) -> ();
+  addOfficerDuel: (armyId: text, duel: OfficerDuel) -> ();
+  addPactContractEntry: (entry: PactContractEntry) -> (text);
+  addPartyInventoryItem: (item: PartyInventoryItem) -> ();
+  addPartyNote: (note: PartyNote) -> ();
+  addPartyXpEntry: (entry: PartyXpEntry) -> (bool);
+  addPersonalLootEntry: (characterId: CharacterId, entry:
+   PersonalLootEntry) -> (text);
+  addPortalEntry: (entry: PortalEntry) -> (text);
+  addPrayerLogEntry: (entry: PrayerLogEntry) -> (text);
+  addPrisonerExchange: (armyId: text, entry: PrisonerExchangeEntry) -> (text);
+  addProphecyEntry: (entry: ProphecyEntry) -> (text);
+  addProtocolLogEntry: (entry: ProtocolLogEntry) -> (text);
+  addPsychEvalEntry: (entry: PsychEvalEntry) -> (text);
+  addQuest: (characterId: CharacterId, quest: Quest) -> ();
+  addRace: (race: CustomRace) -> (RaceId);
+  addRealmTerritoryEntry: (entry: RealmTerritoryEntry) -> (text);
+  addReclassificationEntry: (entry: ReclassificationEntry) -> (text);
+  addRecruitmentEntry: (armyId: text, entry: RecruitmentEntry) -> ();
+  addRivalEntry: (characterId: CharacterId, entry: RivalEntry) -> (text);
+  addScpObjectEntry: (entry: ScpObjectEntry) -> (text);
+  addSecretMissionLog: (entry: SecretMissionLog) -> (text);
+  addSessionEntry: (entry: SessionEntry) -> ();
+  addSiegeEntry: (entry: SiegeEntry) -> (text);
+  addSinCorruptionEntry: (entry: SinCorruptionEntry) -> (text);
+  addSiteAssignmentEntry: (entry: SiteAssignmentEntry) -> (text);
+  addSoldierBio: (entry: SoldierBio) -> (text);
+  addSoulBountyEntry: (entry: SoulBountyEntry) -> (text);
+  addSpell: (spell: Spell) -> (SpellId);
+  addSummoningLogEntry: (entry: SummoningLogEntry) -> (text);
+  addTimelineEvent: (event: TimelineEvent) -> ();
+  addTrainingCertification: (entry: TrainingCertification) -> (text);
+  addTrait: (trait: Trait) -> (TraitId);
+  addTrophyEntry: (entry: TrophyEntry) -> (text);
+  addVeteranUnit: (entry: VeteranUnit) -> (text);
+  addWarCrimeEntry: (entry: WarCrimeEntry) -> (text);
+  addWeatherEntry: (entry: WeatherEntry) -> (nat);
+  addWhistleblowerEntry: (entry: WhistleblowerEntry) -> (text);
+  applyCharacterLevelFromXp: (characterId: CharacterId) -> ();
+  applyRaceGrantsToCharacter: (characterId: CharacterId, raceId: RaceId) ->
+   ();
+  assignCallerUserRole: (user: principal, role: UserRole) -> ();
+  createCharacter: (char: Character) -> (CharacterId);
+  deleteAllianceTreaty: (id: text) -> (bool);
+  deleteAlly: (id: nat) -> ();
+  deleteAmnesticLogEntry: (id: text) -> (bool);
+  deleteAncientHistoryEntry: (id: text) -> (bool);
+  deleteAngelClassEntry: (id: text) -> (bool);
+  deleteAnomalyExposureEntry: (id: text) -> (bool);
+  deleteAppReminder: (id: text) -> (bool);
+  deleteArmy: (id: text) -> ();
+  deleteArmyDoctrine: (id: text) -> (bool);
+  deleteArmyLootEntry: (id: text) -> (bool);
+  deleteArmyRivalEntry: (id: text) -> (bool);
+  deleteAscensionLogEntry: (id: text) -> (bool);
+  deleteBattleEngagement: (armyId: text, engagementId: text) -> ();
+  deleteBattleOutcome: (id: nat) -> (bool);
+  deleteBestiaryCreature: (id: nat) -> (bool);
+  deleteBetrayalLogEntry: (id: text) -> (bool);
+  deleteBlackBudgetEntry: (id: text) -> (bool);
+  deleteBloodOathEntry: (id: text) -> (bool);
+  deleteBloodlineEntry: (id: text) -> (bool);
+  deleteBountyObjective: (id: text) -> (bool);
+  deleteCalendarEvent: (id: nat) -> (bool);
+  deleteCampaign: (id: text) -> ();
+  deleteCampaignEnemy: (id: text) -> (bool);
+  deleteCapturedEnemy: (id: nat) -> (bool);
+  deleteCelestialBlessing: (id: text) -> (bool);
+  deleteCharacter: (id: CharacterId) -> ();
+  deleteCharacterAbility: (id: CharacterAbilityId) -> ();
+  deleteCharacterCustomStat: (id: nat) -> ();
+  deleteCharacterFeat: (id: nat) -> ();
+  deleteCharacterInjury: (id: text) -> (bool);
+  deleteCharacterLegacy: (id: text) -> (bool);
+  deleteCharacterPhysicalAttack: (id: CharacterPhysicalAttackId) -> ();
+  deleteCharacterProficiency: (id: nat) -> ();
+  deleteCharacterRelationship: (id: nat) -> (bool);
+  deleteCharacterSkill: (id: nat) -> ();
+  deleteClass: (id: ClassId) -> ();
+  deleteClearanceLevelEntry: (id: text) -> (bool);
+  deleteCommendation: (id: text) -> (bool);
+  deleteContainmentBreachEntry: (id: text) -> (bool);
+  deleteCorruptionLogEntry: (id: text) -> (bool);
+  deleteCourtMartialEntry: (id: text) -> (bool);
+  deleteCursedItemEntry: (id: text) -> (bool);
+  deleteCustomAbility: (id: CustomAbilityId) -> ();
+  deleteCustomFeat: (id: nat) -> ();
+  deleteCustomItem: (id: CustomItemId) -> ();
+  deleteCustomPhysicalAttack: (id: CustomPhysicalAttackId) -> ();
+  deleteCustomSkill: (id: nat) -> ();
+  deleteCustomSpell: (id: CustomSpellId) -> ();
+  deleteCustomSpellSchool: (id: CustomSpellSchoolId) -> ();
+  deleteCustomStat: (id: nat) -> ();
+  deleteDarkRitualEntry: (id: text) -> (bool);
+  deleteDefectionEntry: (id: text) -> (bool);
+  deleteDemonClassEntry: (id: text) -> (bool);
+  deleteDeploymentNote: (id: text) -> (bool);
+  deleteDiplomacyEntry: (id: text) -> (bool);
+  deleteDivineMandate: (id: text) -> (bool);
+  deleteDreamVisionEntry: (id: text) -> (bool);
+  deleteEncounterEntry: (id: text) -> ();
+  deleteEnemyProfile: (id: text) -> (bool);
+  deleteEspionageEntry: (id: text) -> (bool);
+  deleteEthicsReviewEntry: (id: text) -> (bool);
+  deleteFaction: (id: nat) -> (bool);
+  deleteFallenSoldier: (id: text) -> (bool);
+  deleteGainLossEntry: (id: text) -> (bool);
+  deleteHolyRelic: (id: text) -> (bool);
+  deleteHolyWarEntry: (id: text) -> (bool);
+  deleteInfernalDebtEntry: (id: text) -> (bool);
+  deleteInitiativeTracker: (id: text) -> (bool);
+  deleteInterPresetWarEntry: (id: text) -> (bool);
+  deleteItem: (id: InventoryItemId) -> ();
+  deleteLanguage: (id: nat) -> ();
+  deleteLocation: (id: text) -> ();
+  deleteLootDistributionEntry: (id: text) -> (bool);
+  deleteLoreEntry: (id: text) -> ();
+  deleteLostKnowledgeEntry: (id: text) -> (bool);
+  deleteMIAEntry: (id: text) -> (bool);
+  deleteMythologicalFigure: (id: text) -> (bool);
+  deleteNPC: (id: text) -> ();
+  deleteOfficerDuel: (armyId: text, duelId: text) -> ();
+  deletePactContractEntry: (id: text) -> (bool);
+  deletePartyInventoryItem: (id: text) -> ();
+  deletePartyNote: (id: text) -> ();
+  deletePartyXpEntry: (id: text) -> (bool);
+  deletePersonalLootEntry: (id: text) -> (bool);
+  deletePortalEntry: (id: text) -> (bool);
+  deletePrayerLogEntry: (id: text) -> (bool);
+  deletePrisonerExchange: (id: text) -> (bool);
+  deleteProphecyEntry: (id: text) -> (bool);
+  deleteProtocolLogEntry: (id: text) -> (bool);
+  deletePsychEvalEntry: (id: text) -> (bool);
+  deleteQuest: (characterId: CharacterId, questId: text) -> ();
+  deleteRace: (id: RaceId) -> ();
+  deleteRealmTerritoryEntry: (id: text) -> (bool);
+  deleteReclassificationEntry: (id: text) -> (bool);
+  deleteRecruitmentEntry: (armyId: text, entryId: text) -> ();
+  deleteRivalEntry: (id: text) -> (bool);
+  deleteScpObjectEntry: (id: text) -> (bool);
+  deleteSecretMissionLog: (id: text) -> (bool);
+  deleteSessionEntry: (id: text) -> ();
+  deleteSiegeEntry: (id: text) -> (bool);
+  deleteSinCorruptionEntry: (id: text) -> (bool);
+  deleteSiteAssignmentEntry: (id: text) -> (bool);
+  deleteSoldierBio: (id: text) -> (bool);
+  deleteSoulBountyEntry: (id: text) -> (bool);
+  deleteSpell: (id: SpellId) -> ();
+  deleteSummoningLogEntry: (id: text) -> (bool);
+  deleteTabNote: (characterId: CharacterId, tabName: text) -> ();
+  deleteTimelineEvent: (id: text) -> ();
+  deleteTrainingCertification: (id: text) -> (bool);
+  deleteTrait: (id: TraitId) -> ();
+  deleteTrophyEntry: (id: text) -> (bool);
+  deleteVeteranUnit: (id: text) -> (bool);
+  deleteWarCrimeEntry: (id: text) -> (bool);
+  deleteWeatherEntry: (id: nat) -> (bool);
+  deleteWhistleblowerEntry: (id: text) -> (bool);
+  exportAllData: () -> (text) query;
+  exportCharacter: (characterId: CharacterId) -> (text) query;
+  getAbilitiesByCharacter: (characterId: CharacterId) ->
+   (vec record {
+          CharacterAbilityId;
+          CharacterAbility;
+        }) query;
+  getAllCharacters: () -> (vec record {
+                                 CharacterId;
+                                 Character;
+                               }) query;
+  getAllCharactersCount: (record {}) -> (nat);
+  getAllClasses: () -> (vec record {
+                              ClassId;
+                              CustomClass;
+                            }) query;
+  getAllCustomAbilities: () ->
+   (vec record {
+          CustomAbilityId;
+          CustomAbility;
+        }) query;
+  getAllCustomFeats: () -> (vec CustomFeat) query;
+  getAllCustomItems: () -> (vec record {
+                                  CustomItemId;
+                                  CustomItem;
+                                }) query;
+  getAllCustomPhysicalAttacks: () ->
+   (vec record {
+          CustomPhysicalAttackId;
+          CustomPhysicalAttack;
+        }) query;
+  getAllCustomSkills: () -> (vec CustomSkill) query;
+  getAllCustomSpellSchools: () ->
+   (vec record {
+          CustomSpellSchoolId;
+          CustomSpellSchool;
+        }) query;
+  getAllCustomSpells: () -> (vec record {
+                                   CustomSpellId;
+                                   CustomSpell;
+                                 }) query;
+  getAllCustomStats: () -> (vec CustomStat) query;
+  getAllRaceLinkedContent: () ->
+   (vec record {
+          RaceId;
+          RaceLinkedContent;
+        }) query;
+  getAllRaces: () -> (vec record {
+                            RaceId;
+                            CustomRace;
+                          }) query;
+  getAllUserProfiles: () -> (vec record {
+                                   principal;
+                                   UserProfile;
+                                 }) query;
+  getAllianceTreaties: (armyId: text) -> (vec AllianceTreaty) query;
+  getAlliesByCharacter: (characterId: CharacterId) -> (vec Ally) query;
+  getAmnesticLog: (armyId: text) -> (vec AmnesticLogEntry) query;
+  getAncientHistoryEntries: () -> (vec AncientHistoryEntry) query;
+  getAngelClassLog: (armyId: text) -> (vec AngelClassEntry) query;
+  getAnomalyExposureLog: (armyId: text) -> (vec AnomalyExposureEntry) query;
+  getAppReminders: () -> (vec AppReminder) query;
+  getArmies: () -> (vec Army) query;
+  getArmiesByCharacter: (characterId: CharacterId) -> (vec Army) query;
+  getArmyAlignment: (armyId: text) -> (opt ArmyAlignmentEntry) query;
+  getArmyDoctrines: (armyId: text) -> (vec ArmyDoctrine) query;
+  getArmyLoot: (armyId: text) -> (vec ArmyLootEntry) query;
+  getArmyMetadata: (armyId: text) -> (opt ArmyMetadata) query;
+  getArmyMoraleHistory: (armyId: text) -> (vec ArmyMoraleHistoryEntry) query;
+  getArmyOfficerSkills: (armyId: nat) -> (vec OfficerSkillEntry) query;
+  getArmyRelationships: (armyId: text) -> (vec ArmyRelationship) query;
+  getArmyRivalEntries: (armyId: text) -> (vec ArmyRivalEntry) query;
+  getArmySupplyRoutes: (armyId: nat) -> (vec SupplyRoute) query;
+  getAscensionLog: (armyId: text) -> (vec AscensionLogEntry) query;
+  getAttunedItems: (characterId: CharacterId) -> (vec AttunedItem) query;
+  getBattleEngagements: (armyId: text) -> (vec BattleEngagement) query;
+  getBattleOutcomes: (armyId: text) -> (vec BattleOutcome) query;
+  getBestiaryCreatures: () -> (vec BestiaryCreature) query;
+  getBetrayalLog: (armyId: text) -> (vec BetrayalLogEntry) query;
+  getBlackBudgetLog: (armyId: text) -> (vec BlackBudgetEntry) query;
+  getBloodOathEntries: (armyId: text) -> (vec BloodOathEntry) query;
+  getBloodlineEntries: (characterId: text) -> (vec BloodlineEntry) query;
+  getBountyObjectives: (armyId: text) -> (vec BountyObjective) query;
+  getCalendarEvents: () -> (vec CalendarEvent) query;
+  getCallerUserProfile: () -> (opt UserProfile) query;
+  getCallerUserRole: () -> (UserRole) query;
+  getCampaignEnemies: (campaignId: text) -> (vec CampaignEnemy) query;
+  getCampaigns: () -> (vec Campaign) query;
+  getCapturedEnemies: (armyId: text) -> (vec CapturedEnemy) query;
+  getCelestialBlessings: (armyId: text) -> (vec CelestialBlessingEntry) query;
+  getCharacter: (id: CharacterId) -> (opt Character) query;
+  getCharacterAppearance: (charId: CharacterId) ->
+   (opt CharacterAppearance) query;
+  getCharacterConditions: (charId: CharacterId) ->
+   (vec CharacterCondition) query;
+  getCharacterCustomStatsByCharacter: (characterId: CharacterId) ->
+   (vec CharacterCustomStat) query;
+  getCharacterFeatsByCharacter: (characterId: CharacterId) ->
+   (vec CharacterFeat) query;
+  getCharacterInjuries: (characterId: CharacterId) ->
+   (vec CharacterInjury) query;
+  getCharacterLegacies: (characterId: text) -> (vec CharacterLegacy) query;
+  getCharacterMulticlass: (charId: CharacterId) ->
+   (vec MulticlassEntry) query;
+  getCharacterProficienciesByCharacter: (characterId: CharacterId) ->
+   (vec CharacterProficiency) query;
+  getCharacterRelationships: (characterId: text) ->
+   (vec CharacterRelationship) query;
+  getCharacterSkillsByCharacter: (characterId: CharacterId) ->
+   (vec CharacterSkill) query;
+  getClearanceLevels: (armyId: text) -> (vec ClearanceLevelEntry) query;
+  getCommendations: (armyId: text) -> (vec Commendation) query;
+  getConcentrationState: (characterId: CharacterId) ->
+   (opt ConcentrationState) query;
+  getContainmentBreachLog: (armyId: text) ->
+   (vec ContainmentBreachEntry) query;
+  getCorruptionLog: (armyId: text) -> (vec CorruptionLogEntry) query;
+  getCourtMartialEntries: (armyId: text) -> (vec CourtMartialEntry) query;
+  getCurrencyState: (characterId: CharacterId) -> (opt CurrencyState) query;
+  getCursedItemEntries: (characterId: text) -> (vec CursedItemEntry) query;
+  getDarkRitualLog: (armyId: text) -> (vec DarkRitualEntry) query;
+  getDeathSaveState: (characterId: CharacterId) -> (opt DeathSaveState) query;
+  getDefectionEntries: () -> (vec DefectionEntry) query;
+  getDemonClassLog: (armyId: text) -> (vec DemonClassEntry) query;
+  getDeploymentNotes: (armyId: text) -> (vec DeploymentMapNote) query;
+  getDiplomacyLog: (armyId: text) -> (vec DiplomacyEntry) query;
+  getDivineMandates: (armyId: text) -> (vec DivineMandateEntry) query;
+  getDreamVisionEntries: (characterId: text) -> (vec DreamVisionEntry) query;
+  getEncounterLog: () -> (vec EncounterEntry) query;
+  getEnemyRoster: (armyId: text) -> (vec EnemyProfile) query;
+  getEquipmentSlots: (characterId: CharacterId) -> (vec EquipmentSlot) query;
+  getEspionageEntries: (armyId: text) -> (vec EspionageEntry) query;
+  getEthicsReviewLog: (armyId: text) -> (vec EthicsReviewEntry) query;
+  getFactions: () -> (vec Faction) query;
+  getFallenSoldiers: (armyId: text) -> (vec FallenSoldierEntry) query;
+  getGainLossEntries: (armyId: text) -> (vec GainLossEntry) query;
+  getHPState: (characterId: CharacterId) -> (opt HPState) query;
+  getHolyRelics: (armyId: text) -> (vec HolyRelicEntry) query;
+  getHolyWarLog: (armyId: text) -> (vec HolyWarEntry) query;
+  getInfernalDebtLog: (armyId: text) -> (vec InfernalDebtEntry) query;
+  getInitiativeTrackers: () -> (vec InitiativeTracker) query;
+  getInspirationState: (characterId: CharacterId) ->
+   (opt InspirationState) query;
+  getInterPresetWarEntries: () -> (vec InterPresetWarEntry) query;
+  getItemsByCharacter: (characterId: CharacterId) ->
+   (vec record {
+          InventoryItemId;
+          InventoryItem;
+        }) query;
+  getLanguagesByCharacter: (characterId: CharacterId) -> (vec Language) query;
+  getLocationDungeonRooms: (locationId: text) -> (vec DungeonRoom) query;
+  getLocations: () -> (vec Location) query;
+  getLootDistributionLog: () -> (vec LootDistributionEntry) query;
+  getLoreEntries: () -> (vec LoreEntry) query;
+  getLostKnowledgeEntries: () -> (vec LostKnowledgeEntry) query;
+  getMIAEntries: (armyId: text) -> (vec MIAEntry) query;
+  getMythologicalFigures: () -> (vec MythologicalFigure) query;
+  getNPCs: () -> (vec NPC) query;
+  getOfficerDuels: (armyId: text) -> (vec OfficerDuel) query;
+  getPactContractLog: (armyId: text) -> (vec PactContractEntry) query;
+  getPartyInventory: () -> (vec PartyInventoryItem) query;
+  getPartyNotes: () -> (vec PartyNote) query;
+  getPartyXpEntries: () -> (vec PartyXpEntry) query;
+  getPersonalLoot: (characterId: CharacterId) ->
+   (vec PersonalLootEntry) query;
+  getPhysicalAttacksByCharacter: (characterId: CharacterId) ->
+   (vec record {
+          CharacterPhysicalAttackId;
+          CharacterPhysicalAttack;
+        }) query;
+  getPlaneRealmEntry: () -> (opt PlaneRealmEntry) query;
+  getPortalEntries: () -> (vec PortalEntry) query;
+  getPrayerLog: (armyId: text) -> (vec PrayerLogEntry) query;
+  getPreparedSpells: (characterId: CharacterId) -> (vec text) query;
+  getPrisonerExchanges: (armyId: text) -> (vec PrisonerExchangeEntry) query;
+  getProphecyEntries: () -> (vec ProphecyEntry) query;
+  getProtocolLog: (armyId: text) -> (vec ProtocolLogEntry) query;
+  getPsychEvalLog: (armyId: text) -> (vec PsychEvalEntry) query;
+  getQuestsByCharacter: (characterId: CharacterId) -> (vec Quest) query;
+  getRealmTerritoryLog: (armyId: text) -> (vec RealmTerritoryEntry) query;
+  getReclassificationLog: (armyId: text) -> (vec ReclassificationEntry) query;
+  getRecruitmentLog: (armyId: text) -> (vec RecruitmentEntry) query;
+  getRestState: (characterId: CharacterId) -> (opt RestState) query;
+  getRivals: (characterId: CharacterId) -> (vec RivalEntry) query;
+  getSaveThrowState: (characterId: CharacterId) -> (opt SaveThrowState) query;
+  getScpObjectLog: (armyId: text) -> (vec ScpObjectEntry) query;
+  getSecretMissionLogs: (armyId: text) -> (vec SecretMissionLog) query;
+  getSessionLog: () -> (vec SessionEntry) query;
+  getSettings: () -> (Settings) query;
+  getSiegeEntries: (armyId: text) -> (vec SiegeEntry) query;
+  getSinCorruptionLog: (armyId: text) -> (vec SinCorruptionEntry) query;
+  getSiteAssignmentLog: (armyId: text) -> (vec SiteAssignmentEntry) query;
+  getSoldierBios: (armyId: text) -> (vec SoldierBio) query;
+  getSoulBountyLog: (armyId: text) -> (vec SoulBountyEntry) query;
+  getSpellSlotsByCharacter: (characterId: CharacterId) ->
+   (vec SpellSlotState) query;
+  getSpellsByCharacter: (characterId: CharacterId) ->
+   (vec record {
+          SpellId;
+          Spell;
+        }) query;
+  getSrdSpells: () -> (vec SrdSpell) query;
+  getSummoningLog: (armyId: text) -> (vec SummoningLogEntry) query;
+  getSupplyConsumptionLog: (armyId: text) ->
+   (vec SupplyConsumptionEntry) query;
+  getTabNote: (characterId: CharacterId, tabName: text) ->
+   (opt TabNote) query;
+  getThemeSettings: () -> (opt ThemeSettings) query;
+  getTimelineEvents: () -> (vec TimelineEvent) query;
+  getTrainingCertifications: (armyId: text) ->
+   (vec TrainingCertification) query;
+  getTraitsByCharacter: (characterId: CharacterId) ->
+   (vec record {
+          TraitId;
+          Trait;
+        }) query;
+  getTrophyEntries: (armyId: text) -> (vec TrophyEntry) query;
+  getUserProfile: (user: principal) -> (opt UserProfile) query;
+  getVeteranUnits: (armyId: text) -> (vec VeteranUnit) query;
+  getWarCrimeEntries: (armyId: text) -> (vec WarCrimeEntry) query;
+  getWeatherEntries: () -> (vec WeatherEntry) query;
+  getWhistleblowerLog: (armyId: text) -> (vec WhistleblowerEntry) query;
+  getXpState: (characterId: CharacterId) -> (opt XpState) query;
+  importAllData: (jsonData: text) -> (bool);
+  importCharacter: (input: ImportCharacterInput) -> (CharacterId);
+  initializeSrdSpells: () -> (nat);
+  isCallerAdmin: () -> (bool) query;
+  logSupplyConsumption: (armyId: text, entry: SupplyConsumptionEntry) -> ();
+  removeAttunedItem: (characterId: CharacterId, itemId: text) -> ();
+  saveAppReminder: (reminder: AppReminder) -> (bool);
+  saveArmyAlignment: (entry: ArmyAlignmentEntry) -> (bool);
+  saveArmyMetadata: (entry: ArmyMetadata) -> (bool);
+  saveCallerUserProfile: (profile: UserProfile) -> ();
+  saveInitiativeTracker: (tracker: InitiativeTracker) -> (bool);
+  savePlaneRealmEntry: (entry: PlaneRealmEntry) -> (bool);
+  saveTabNote: (characterId: CharacterId, tabName: text, content: text) -> ();
+  setPreparedSpells: (characterId: CharacterId, spellIds: vec text) -> ();
+  simulateBattle: (armyId1: nat, armyId2: nat) -> (BattleSimResult) query;
+  updateAllianceTreaty: (entry: AllianceTreaty) -> (bool);
+  updateAlly: (id: nat, name: text, relationship: text, notes: text) -> ();
+  updateAmnesticLogEntry: (entry: AmnesticLogEntry) -> (bool);
+  updateAncientHistoryEntry: (entry: AncientHistoryEntry) -> (bool);
+  updateAngelClassEntry: (entry: AngelClassEntry) -> (bool);
+  updateAnomalyExposureEntry: (entry: AnomalyExposureEntry) -> (bool);
+  updateArmy: (id: text, input: ArmyInput) -> ();
+  updateArmyBanner: (armyId: text, url: text) -> ();
+  updateArmyDoctrine: (entry: ArmyDoctrine) -> (bool);
+  updateArmyLootEntry: (id: text, entry: ArmyLootEntry) -> (bool);
+  updateArmyOfficerSkills: (armyId: nat, skills: vec OfficerSkillEntry) ->
+   (bool);
+  updateArmyRelationships: (armyId: text, relationships:
+   vec ArmyRelationship) -> ();
+  updateArmyRivalEntry: (entry: ArmyRivalEntry) -> (bool);
+  updateArmySupplyRoutes: (armyId: nat, routes: vec SupplyRoute) -> (bool);
+  updateAscensionLogEntry: (entry: AscensionLogEntry) -> (bool);
+  updateBattleOutcome: (entry: BattleOutcome) -> (bool);
+  updateBestiaryCreature: (entry: BestiaryCreature) -> (bool);
+  updateBetrayalLogEntry: (entry: BetrayalLogEntry) -> (bool);
+  updateBlackBudgetEntry: (entry: BlackBudgetEntry) -> (bool);
+  updateBloodOathEntry: (entry: BloodOathEntry) -> (bool);
+  updateBloodlineEntry: (entry: BloodlineEntry) -> (bool);
+  updateBountyObjective: (id: text, obj: BountyObjective) -> (bool);
+  updateCalendarEvent: (entry: CalendarEvent) -> (bool);
+  updateCampaign: (campaign: Campaign) -> ();
+  updateCampaignEnemy: (id: text, enemy: CampaignEnemy) -> (bool);
+  updateCapturedEnemy: (entry: CapturedEnemy) -> (bool);
+  updateCelestialBlessing: (entry: CelestialBlessingEntry) -> (bool);
+  updateCharacter: (id: CharacterId, char: Character) -> ();
+  updateCharacterAbility: (id: CharacterAbilityId, ability:
+   CharacterAbility) -> ();
+  updateCharacterAppearance: (charId: CharacterId, appearance:
+   CharacterAppearance) -> (bool);
+  updateCharacterConditions: (charId: CharacterId, conditions:
+   vec CharacterCondition) -> (bool);
+  updateCharacterCustomStat: (id: nat, value: text) -> ();
+  updateCharacterFeat: (id: nat, name: text, description: text) -> ();
+  updateCharacterInjury: (id: text, injury: CharacterInjury) -> (bool);
+  updateCharacterLegacy: (entry: CharacterLegacy) -> (bool);
+  updateCharacterMulticlass: (charId: CharacterId, entries:
+   vec MulticlassEntry) -> (bool);
+  updateCharacterPhysicalAttack: (id: CharacterPhysicalAttackId, attack:
+   CharacterPhysicalAttack) -> ();
+  updateCharacterPortrait: (characterId: CharacterId, url: text) -> ();
+  updateCharacterRelationship: (entry: CharacterRelationship) -> (bool);
+  updateCharacterSkill: (id: nat, skillName: text, proficient: bool,
+   expertise: bool) -> ();
+  updateClass: (id: ClassId, cls: CustomClass) -> ();
+  updateClearanceLevelEntry: (entry: ClearanceLevelEntry) -> (bool);
+  updateCommendation: (entry: Commendation) -> (bool);
+  updateConcentrationState: (characterId: CharacterId, state:
+   ConcentrationState) -> ();
+  updateContainmentBreachEntry: (entry: ContainmentBreachEntry) -> (bool);
+  updateCorruptionLogEntry: (entry: CorruptionLogEntry) -> (bool);
+  updateCourtMartialEntry: (entry: CourtMartialEntry) -> (bool);
+  updateCurrencyState: (characterId: CharacterId, state: CurrencyState) -> ();
+  updateCursedItemEntry: (entry: CursedItemEntry) -> (bool);
+  updateCustomAbility: (id: CustomAbilityId, ability: CustomAbility) -> ();
+  updateCustomFeat: (id: nat, name: text, description: text, prerequisites:
+   text) -> ();
+  updateCustomItem: (id: CustomItemId, item: CustomItem) -> ();
+  updateCustomPhysicalAttack: (id: CustomPhysicalAttackId, attack:
+   CustomPhysicalAttack) -> ();
+  updateCustomSkill: (id: nat, name: text, statBased: text, description:
+   text) -> ();
+  updateCustomSpell: (id: CustomSpellId, spell: CustomSpell) -> ();
+  updateCustomSpellSchool: (id: CustomSpellSchoolId, school:
+   CustomSpellSchool) -> ();
+  updateCustomStat: (id: nat, name: text, description: text, defaultValue:
+   text) -> ();
+  updateDarkRitualEntry: (entry: DarkRitualEntry) -> (bool);
+  updateDeathSaveState: (characterId: CharacterId, state: DeathSaveState) ->
+   ();
+  updateDefectionEntry: (entry: DefectionEntry) -> (bool);
+  updateDemonClassEntry: (entry: DemonClassEntry) -> (bool);
+  updateDeploymentNote: (id: text, note: DeploymentMapNote) -> (bool);
+  updateDiplomacyEntry: (id: text, entry: DiplomacyEntry) -> (bool);
+  updateDivineMandate: (entry: DivineMandateEntry) -> (bool);
+  updateDreamVisionEntry: (entry: DreamVisionEntry) -> (bool);
+  updateEncounterEntry: (entry: EncounterEntry) -> ();
+  updateEnemyProfile: (id: text, profile: EnemyProfile) -> (bool);
+  updateEquipmentSlots: (characterId: CharacterId, slots:
+   vec EquipmentSlot) -> ();
+  updateEspionageEntry: (entry: EspionageEntry) -> (bool);
+  updateEthicsReviewEntry: (entry: EthicsReviewEntry) -> (bool);
+  updateFaction: (entry: Faction) -> (bool);
+  updateFallenSoldier: (entry: FallenSoldierEntry) -> (bool);
+  updateGainLossEntry: (id: text, entry: GainLossEntry) -> (bool);
+  updateHPState: (characterId: CharacterId, state: HPState) -> ();
+  updateHolyRelic: (entry: HolyRelicEntry) -> (bool);
+  updateHolyWarEntry: (entry: HolyWarEntry) -> (bool);
+  updateInfernalDebtEntry: (entry: InfernalDebtEntry) -> (bool);
+  updateInspirationState: (characterId: CharacterId, state:
+   InspirationState) -> ();
+  updateInterPresetWarEntry: (entry: InterPresetWarEntry) -> (bool);
+  updateItem: (id: InventoryItemId, item: InventoryItem) -> ();
+  updateLanguage: (id: nat, name: text) -> ();
+  updateLocation: (loc: Location) -> ();
+  updateLocationDungeonRooms: (locationId: text, rooms: vec DungeonRoom) ->
+   (bool);
+  updateLoreEntry: (entry: LoreEntry) -> ();
+  updateLostKnowledgeEntry: (entry: LostKnowledgeEntry) -> (bool);
+  updateMIAEntry: (entry: MIAEntry) -> (bool);
+  updateMythologicalFigure: (entry: MythologicalFigure) -> (bool);
+  updateNPC: (npc: NPC) -> ();
+  updatePactContractEntry: (entry: PactContractEntry) -> (bool);
+  updatePartyInventoryItem: (item: PartyInventoryItem) -> ();
+  updatePartyNote: (note: PartyNote) -> ();
+  updatePersonalLootEntry: (id: text, entry: PersonalLootEntry) -> (bool);
+  updatePortalEntry: (entry: PortalEntry) -> (bool);
+  updatePrayerLogEntry: (entry: PrayerLogEntry) -> (bool);
+  updatePrisonerExchange: (id: text, entry: PrisonerExchangeEntry) -> (bool);
+  updateProphecyEntry: (entry: ProphecyEntry) -> (bool);
+  updateProtocolLogEntry: (entry: ProtocolLogEntry) -> (bool);
+  updatePsychEvalEntry: (entry: PsychEvalEntry) -> (bool);
+  updateQuest: (characterId: CharacterId, quest: Quest) -> ();
+  updateRace: (id: RaceId, race: CustomRace) -> ();
+  updateRaceLinkedContent: (raceId: RaceId, content: RaceLinkedContent) -> ();
+  updateRealmTerritoryEntry: (entry: RealmTerritoryEntry) -> (bool);
+  updateReclassificationEntry: (entry: ReclassificationEntry) -> (bool);
+  updateRestState: (characterId: CharacterId, state: RestState) -> ();
+  updateRivalEntry: (id: text, entry: RivalEntry) -> (bool);
+  updateSaveThrowState: (characterId: CharacterId, state: SaveThrowState) ->
+   ();
+  updateScpObjectEntry: (entry: ScpObjectEntry) -> (bool);
+  updateSecretMissionLog: (entry: SecretMissionLog) -> (bool);
+  updateSessionEntry: (entry: SessionEntry) -> ();
+  updateSettings: (newSettings: Settings) -> ();
+  updateSiegeEntry: (entry: SiegeEntry) -> (bool);
+  updateSinCorruptionEntry: (entry: SinCorruptionEntry) -> (bool);
+  updateSiteAssignmentEntry: (entry: SiteAssignmentEntry) -> (bool);
+  updateSoldierBio: (entry: SoldierBio) -> (bool);
+  updateSoulBountyEntry: (entry: SoulBountyEntry) -> (bool);
+  updateSpell: (id: SpellId, spell: Spell) -> ();
+  updateSpellSlots: (characterId: CharacterId, slots: vec SpellSlotState) ->
+   ();
+  updateSummoningLogEntry: (entry: SummoningLogEntry) -> (bool);
+  updateThemeSettings: (settings: ThemeSettings) -> (bool);
+  updateTimelineEvent: (event: TimelineEvent) -> ();
+  updateTrainingCertification: (entry: TrainingCertification) -> (bool);
+  updateTrait: (id: TraitId, trait: Trait) -> ();
+  updateTrophyEntry: (entry: TrophyEntry) -> (bool);
+  updateVeteranUnit: (entry: VeteranUnit) -> (bool);
+  updateWarCrimeEntry: (entry: WarCrimeEntry) -> (bool);
+  updateWeatherEntry: (entry: WeatherEntry) -> (bool);
+  updateWhistleblowerEntry: (entry: WhistleblowerEntry) -> (bool);
+  updateXpState: (characterId: CharacterId, state: XpState) -> ();
+}

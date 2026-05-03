@@ -1,0 +1,29 @@
+{
+  "overview": "DungeonScribe is a comprehensive D&D character, army, and campaign management app for the Internet Computer. It supports multiple characters and armies with deep customization for spells, races, classes, feats, items, abilities, and more. Features include a full Army management system, world building tools, campaign organization, global search, cross-entity linking, and mobile-friendly design.",
+  "features": [
+    "Multi-character management with 19 customizable tabs",
+    "Army system with 17+ management panels and H.M.C. Military rank preset (72 ranks)",
+    "Multiclass support with per-class spell slot tracking",
+    "Condition tracker with D&D 5e conditions",
+    "Battle simulator for army vs army outcomes",
+    "Kingdom, religion, and dungeon/location trackers",
+    "Initiative tracker for encounters",
+    "Party XP tracker and loot distribution log",
+    "Data backup and restore",
+    "Customizable app theme with accent color picker",
+    "Global search across all entities",
+    "Cross-entity linking with dropdowns",
+    "Mobile-first responsive design"
+  ],
+  "category": "productivity",
+  "tags": [
+    "dnd",
+    "tabletop",
+    "rpg",
+    "character-sheet",
+    "campaign-management",
+    "army",
+    "dungeons-and-dragons"
+  ],
+  "last_updated": "2026-05-02T23:29:18.936Z"
+}
